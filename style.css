@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #0086f3;
+	font-family: Arial, sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	width: 400px;
+	margin: 100px auto;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 30px;
+	border-radius: 5px;
+	/*box-shadow: #d3d3d3*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: #555;
+}
+
+.lacuna {
+	width: 100%;
+}
+
+.nomesenha {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.lacuna label {
+	margin-bottom: 10px;
+	color: #777;
+}
+
+.lacuna input[type="text"],
+.lacuna input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	color: #555;
+	font-size: 16px;
+}
+
+.lacuna input[type="text"]::placeholder,
+.lacuna input[type="password"]::placeholder {
+	color: #bbb;
+}
+
+.lacuna input[type="submit"] {
+	display: block;
+	background-color: #1300b9;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+p {
+	margin-top: 20px;
+	color: #777;
+	font-size: 14px;
+}
+
+a {
+	color: #00b6e4;
+	text-decoration: none;
+}
