@@ -31,10 +31,24 @@ h1 {
 }
 
 .lacuna {
-	width: 100%;
+	width: 90%;
 }
 
-.nomesenha {
+.email {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.nome {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.senha {
 	width: 100%;
 	margin-bottom: 20px;
 	display: flex;
