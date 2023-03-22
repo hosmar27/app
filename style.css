@@ -27,7 +27,7 @@ body {
 h1 {
 	font-size: 24px;
 	margin-bottom: 20px;
-	color: #555;
+	color: rgba(0, 171, 238, 0.596);
 }
 
 .lacuna {
@@ -57,7 +57,7 @@ h1 {
 
 .lacuna label {
 	margin-bottom: 10px;
-	color: #777;
+	color: rgb(0, 170, 212);
 }
 
 .lacuna input[type="text"],
@@ -82,7 +82,6 @@ h1 {
 	border: none;
 	border-radius: 5px;
 	padding: 10px 20px;
-	cursor: pointer;
 	font-size: 16px;
 	margin-top: 20px;
 }
