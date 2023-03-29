@@ -95,8 +95,24 @@ body
             left: -20%;
             animation: engrena 1s infinite ease;
         }
-        
-        @keyframes sub{
-
-            
+        button
+        {
+            display: inline-block;
+            padding: 1rem;
+            border-radius: 4px;
+            word-spacing: 8px;
+            font-weight: 700;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            background-color: coral;
+            transition: .3s;
+            cursor: pointer;
         }
+
+        .button:hover 
+        {
+            box-shadow: 0 0 10px 0px black;
+        }
+        
