@@ -2,6 +2,11 @@ body
         {
             background: rgb(0, 156, 247);
             overflow-x: hidden;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
         }
 
         header
@@ -16,15 +21,19 @@ body
             color: rgb(0, 52, 196);
             text-shadow: 1px 1px black;
             font-family: fantasy;
+
         }
         
         .logincadastro
         {
-            width: 100%;
-            height: 20vh;
+            width: -200px;
+            height: 60vh;
+            align-content: center;
             align-items: center;
+            justify-content: space-between;
             display: flex;
             flex-direction: row;
+            
         }
 
         .login
