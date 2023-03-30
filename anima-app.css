@@ -26,40 +26,52 @@ body
         
         .logincadastro
         {
-            width: -200px;
-            height: 60vh;
+            width: 100px;
+            height: 30vh;
             align-content: center;
             align-items: center;
             justify-content: space-between;
             display: flex;
-            flex-direction: row;
-            
+            flex-direction: column;
+            animation-name: fadeIn;
+            animation-delay: 3s;
+            animation-duration: 3s;
+        }
+        
+        @keyframes .logincadastro {
+        
+            from
+            {
+                opacity: 0;
+            }
+            to
+            {
+                opacity: 1;
+            }
         }
 
         .login
         {
-            width: 100%;
-            height: 100%;
+            width: 225px;
+            height: 50px;
             color: aliceblue;
-            font-size: 50px;
+            font-size: 20px;
             align-items: center;
             display: flex;
             flex-direction: row;
-            justify-content: right;
-            padding-right: 100px;
+            justify-content: center;
         }
 
         .cadastro
         {
-            width: 50%;
-            height: 100%;
+            width: 225px;
+            height: 50px;
             color: aliceblue;
-            font-size: 50px;
+            font-size: 20px;
             align-items: center;
             display: flex;
             flex-direction: row;
-            justify-content: left;
-            padding-left: 100px;
+            justify-content: center;
         }
 
         .bolhas
