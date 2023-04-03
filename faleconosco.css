@@ -1,0 +1,29 @@
+body
+    {
+    background: rgb(0, 156, 247);
+    overflow-x: hidden;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+footer
+{
+    width: 100%;
+    background-color: whitesmoke;
+    justify-content: left;
+    
+}
+.mensagem
+{
+    width: 50px;
+}
+.botao_enviar
+{
+    width: 20px;
+}
+.resposta
+{
+    width: 20px;
+}

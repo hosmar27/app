@@ -11,20 +11,73 @@
 
 </head>
 <body>
+    <div class="tudo">
+        <div class="fundo"></div>
 
-    <div class="fundo"></div>
+        <header>
+            <h1>TRAILERMARINE</h1>
+        </header>
+        
+        <div class="logincadastro">
+            <button class="login">
+                <a href="login.html">login</a>
+            </button>
+            <button class="cadastro">
+                <a href="cadastro.html">Cadastre-se</a>
+            </button>
+    </div>
+        
+  <footer>
+    Fale conosco: 
+    <input class="mensagem"     type="text" id="mensagem"> <button class="botaofaleconosco" onclick="Enviar();">Enviar</button>
+    <div class="botao_enviar"   id="resposta">  </div>
+    <div class="resposta"       id="resposta">  </div>
+  </footer>  
+  </body>
 
-    <header>
-        <h1>TRAILERMARINE</h1>
-    </header>
+<script>
+
+  topico = "senai/47989084528";  // Variável que ficará no servidor MQTT
+
+  // Conexão:
+  client = new Paho.MQTT.Client("broker.hivemq.com", Number(8000), "");
+
+  // Funções executadas quando a conexão é perdida e quando uma mensagem chega:
+  client.onConnectionLost = ConexaoPerdida;
+  client.onMessageArrived = MensagemRecebida;
+
+  // Função chamada quando a conexão for realizada:
+  client.connect({onSuccess:Conectar});
+
+  // A função Conectar deve criar a variável (tópico) no computador remoto:
+  function Conectar() {
     
-    <div class="logincadastro">
-        <button class="login">
-            <a href="login.html">login</a>
-        </button>
-        <button class="cadastro">
-            <a href="cadastro.html">Cadastre-se</a>
-        </button>
+    client.subscribe(topico);  // Tópico (variável) criado no servidor MQTT
+    
+  }
+  
+  function ConexaoPerdida(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      resposta.innerHTML += "Desconectado";
+    }
+  }
+
+  // Função executada quando a variável (tópico) no servidor receber uma mensagem:
+  function MensagemRecebida(message) {
+      resposta.innerHTML += "<br><br>" + message.payloadString;
+  }
+
+  function Enviar()
+  {
+    texto = mensagem.value;
+
+    message = new Paho.MQTT.Message(texto);
+    message.destinationName = topico;
+    client.send(message);
+  }
+
+</script>
+
     
 </body>
 </html>
