@@ -73,6 +73,7 @@ h1 {
 }
 
 .lacuna input[type="text"],
+.Lacuna input[type="email"],
 .lacuna input[type="password"] {
 	width: 100%;
 	padding: 10px;
@@ -83,6 +84,7 @@ h1 {
 }
 
 .lacuna input[type="text"]::placeholder,
+.Lacuna input[type="email"]::placeholder,
 .lacuna input[type="password"]::placeholder {
 	color: #bbb;
 }
