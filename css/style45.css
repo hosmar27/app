@@ -7,7 +7,7 @@ body
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-image: url(fundo_mar.jpeg);
+    background-image: url(../imagens/fundo_mar.jpeg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100%;
