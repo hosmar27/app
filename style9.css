@@ -1,0 +1,254 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+body
+{
+    background-image: url("fundo_mar.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    align-content: center;
+    width: 100%; /*largura*/
+    height: 100vh; /*altura*/
+    margin: 0%;
+    overflow:hidden;
+
+}
+
+
+.tiradecima
+{
+    background-image: url("tiradecima.png");
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-size: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.quadradodados
+{
+    background: rgba(2, 32, 74, 0.5);
+    background-repeat: no-repeat;
+    width:  540px; /* largura*/
+    height: 540px; /*altura*/
+    background-size: 70%;
+    align-items: center;
+    margin-top: 190px;
+    margin-left: 50%;
+    left: -270px;
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    border-radius: 270px;
+    font-size: 25px;
+    box-shadow: 2px 2px #031A39;
+}
+
+a
+{
+    color: #c5e8f0;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'DynaPuff', cursive;
+   font-size: 10px;
+}
+
+.titulo
+{
+    color:#28C0E1;
+    font-family: 'DynaPuff', cursive;
+}
+
+.carrinho
+{
+    height: 100px; /*altura*/
+    width: 150%; /* largura*/
+    margin-top: 0px;
+    padding-left: 80%;
+}
+
+.perfil
+{
+    height: 100px; /*altura*/
+    width: 100%; /* largura*/
+}
+
+.logo
+{
+    width: 100%; /* largura*/
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+.dadosperfil
+{
+    background-color: rgb(255, 255, 255);
+    height: 500px; /*altura*/
+    width: 350px; /* largura*/
+    margin-top: 0%;
+    position: absolute;
+    left: 75%;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 70px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: #28C0E1;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.navegador
+{
+    position: absolute;
+    top: 0px;
+    left: px;
+}
