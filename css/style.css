@@ -67,6 +67,11 @@ h1 {
 	flex-direction: column;
 }
 
+.caixa
+{
+	width: 200px;
+}
+
 .lacuna label {
 	margin-bottom: 10px;
 	color: rgb(0, 170, 212);
@@ -75,7 +80,7 @@ h1 {
 .lacuna input[type="text"],
 .Lacuna input[type="email"],
 .lacuna input[type="password"] {
-	width: 100%;
+	width: 90%;
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid #ddd;
@@ -98,6 +103,7 @@ h1 {
 	padding: 10px 20px;
 	font-size: 16px;
 	margin-top: 20px;
+	width: 200px;
 }
 
 p {
@@ -134,16 +140,4 @@ a {
     margin-left: 90%;
     position: relative;
     align-items: center;
-}
-
-
-@keyframes bolhas1{
-
-    0% {bottom: -1000px; opacity: 1;}
-    100% {bottom: 1100px; opacity: -0.7;}
-}
-@keyframes bolhas2{
-
-	0% {bottom: -700px; opacity: 1;}
-    100% {bottom: 1100px; opacity: -0.8;}
 }
