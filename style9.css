@@ -1,5 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 
 body
 {
@@ -14,9 +13,7 @@ body
     height: 100vh; /*altura*/
     margin: 0%;
     overflow:hidden;
-
 }
-
 
 .tiradecima
 {
@@ -32,6 +29,7 @@ body
     justify-items: center;
     align-content: center;
     align-items: center;
+    z-index: 8;
 }
 
 .quadradodados
@@ -55,13 +53,25 @@ body
     box-shadow: 2px 2px #031A39;
 }
 
+.botao
+{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
 a
 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
     color: #c5e8f0;
     text-decoration: none;
     cursor: pointer;
     font-family: 'DynaPuff', cursive;
-   font-size: 10px;
+    font-size: 10px;
 }
 
 .titulo
@@ -96,42 +106,43 @@ a
 
 .dadosperfil
 {
-    background-color: rgb(255, 255, 255);
+    font-family: 'DynaPuff', cursive;
+    background-color: #ededed82;
     height: 500px; /*altura*/
-    width: 350px; /* largura*/
-    margin-top: 0%;
+    width: 400px; /* largura*/
     position: absolute;
     left: 75%;
+    color:black;
+    z-index: 10;
+    padding-top: 100px;
+    font-size: 25px;
+    
 }
 
-#menuToggle
+#menuToggle /*tres risquinhos*/
 {
   display: block;
   position: relative;
   top: 70px;
   left: 50px;
-  
   z-index: 1;
-  
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
+#menuToggle a /*estilo das escritas*/
 {
   text-decoration: none;
   color: #232323;
-  
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
+#menuToggle a:hover /*quando passar o mause ficar azul*/
 {
   color: #28C0E1;
 }
 
-
-#menuToggle input
+#menuToggle input /*começo da transição*/
 {
   display: block;
   width: 40px;
@@ -139,79 +150,64 @@ a
   position: absolute;
   top: -7px;
   left: -5px;
-  
   cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
+  opacity: 0; /* ocultar tres risquinhos */
+  z-index: 2; 
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
+#menuToggle span /*transição*/
 {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
   background: #cdcdcd;
   border-radius: 3px;
-  
   z-index: 1;
-  
+  /*aqui faz aparecer o quadrado branco*/
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), 
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
+#menuToggle span:first-child /*transição*/
 {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
+#menuToggle span:nth-last-child(2) /*transição*/
 {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
+/*Tres risquinhos formando uma cruz + */
+#menuToggle input:checked ~ span /*transição*/
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-
 /*
- * But let's hide the middle one.
+ * esconde o risquinho do meio
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
+#menuToggle input:checked ~ span:nth-last-child(3) /*transição*/
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
 /*
- * Ohyeah and the last one should go the other direction
+ * último deve ir na outra direção
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
+#menuToggle input:checked ~ span:nth-last-child(2) /*transição*/
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-
 /*
- * Make this absolute positioned
- * at the top left of the screen
+ Faça este posicionamento absoluto
+ no canto superior esquerdo da tela
  */
 #menu
 {
@@ -220,26 +216,22 @@ a
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  
-  background: #ededed;
+  background: #ededed7a;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
+  /* para interromper a oscilação do texto no safari */
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
+#menu li /*tamanho da letra*/
 {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 25px;
 }
-
 /*
- * And let's slide it in from the left
+ * E vamos deslizá-lo da esquerda
  */
 #menuToggle input:checked ~ ul
 {
@@ -250,5 +242,4 @@ a
 {
     position: absolute;
     top: 0px;
-    left: px;
 }
