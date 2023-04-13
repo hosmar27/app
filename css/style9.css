@@ -90,8 +90,11 @@ a
 
 .perfil
 {
+    cursor: pointer;
     height: 100px; /*altura*/
     width: 100%; /* largura*/
+    display: flex;
+    z-index: 20;
 }
 
 .logo
@@ -104,11 +107,11 @@ a
     justify-items: center;
 }
 
-.dadosperfil
+.dadosperfil  /*ESTILO/TAMANHOOOOOOOO*/
 {
     font-family: 'DynaPuff', cursive;
     background-color: #ededed82;
-    height: 500px; /*altura*/
+    height: 400px; /*altura*/
     width: 400px; /* largura*/
     position: absolute;
     left: 75%;
@@ -116,8 +119,25 @@ a
     z-index: 10;
     padding-top: 100px;
     font-size: 25px;
-    
 }
+
+.dadosperfil /*TRANSIÇÃOOOOOOOOOOOO pra ir para direitaaaaa (SUMIRRRRRR)*/
+{
+  position: absolute;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  transform-origin: 0% 0%;
+  transform: translate(120%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  z-index: 10;
+}
+
+.dadosperfil /*TRANSIÇÃOOOOOOOOOOOO pra ir para ESQUERDAAAA (APARECE)*/
+{
+  
+}
+
 
 #menuToggle /*tres risquinhos*/
 {
@@ -198,9 +218,7 @@ a
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-/*
- * último deve ir na outra direção
- */
+/*último deve ir na outra direção*/
 #menuToggle input:checked ~ span:nth-last-child(2) /*transição*/
 {
   transform: rotate(-45deg) translate(0, -1px);
@@ -230,9 +248,7 @@ a
   padding: 10px 0;
   font-size: 25px;
 }
-/*
- * E vamos deslizá-lo da esquerda
- */
+/*E vamos deslizá-lo da esquerda*/
 #menuToggle input:checked ~ ul
 {
   transform: none;
