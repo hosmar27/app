@@ -5,17 +5,17 @@
  header
  {
     width: 100%;
-    height: 15vh;
-    background-color: rgb(2, 2, 129);
+    height: 100px;
+    padding: 0 16px;
+    background-color: #01223d;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-   
  }
  .esq
  {
-    width: 20%;
+    gap: 16px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -27,8 +27,10 @@
     padding-left:-10%;
  }
  .pqp {
-   width: 30%;
+   gap: 16px;
    height: 100%;
+   display: flex;
+   align-items: center;
  }
 
 #menu1 {
@@ -40,7 +42,7 @@
  }
  
  h1{
-    color: rgb(255, 255, 0);
+    color: #a2e1ff;
       font-family: 'Permanent Marker';
       font-style: normal;
       font-weight: 400;
@@ -57,18 +59,13 @@
     justify-content: right;
     flex-direction: row;
     padding-right: 30px;
+    gap: 16px;
  }
  .perfil
  {
   width: 60px;
   height: 55px;
-  margin-left: 15px;
  }
-
-h1
-{
-margin-left: 15px;
-}
 
 
 
@@ -78,35 +75,37 @@ body
   padding: 0;
   
   /* make it look decent enough */
-  background: #232323;
+  background-image: url(/fundo_mar.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
+  overflow: hidden;
+  height: 100vh;
 }
 
 #menuToggle
 {
   display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  
+  position: relative;  
   z-index: 1;
-  
   -webkit-user-select: none;
   user-select: none;
+  margin-top: 9px;
 }
 
 #menuToggle a
 {
   text-decoration: none;
-  color: #232323;
+  color: #a2e1ff;
   
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-  color: tomato;
+  color: white;
 }
 
 
@@ -138,7 +137,7 @@ body
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background: #a2e1ff;
   border-radius: 3px;
   
   z-index: 1;
@@ -149,6 +148,12 @@ body
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
+
+#menuToggle span:hover {
+   background: white;
+}
+
+
 
 #menuToggle span:first-child
 {
@@ -168,7 +173,6 @@ body
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
 }
 
 /*
@@ -200,7 +204,7 @@ body
   padding: 50px;
   padding-top: 125px;
   
-  background: #ededed;
+  background: #01223d;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -232,6 +236,8 @@ body
 
 ul.slides {
    display: flex;
+   flex-direction: row;
+   align-items: center;
    position: relative;
    height: 600px;
    margin: 0;
@@ -265,19 +271,12 @@ ul.slides input {
 .slide-image {
    display: block;
    position: absolute;
-   width: 60%;
-   height: 60%;
-   top: 0;
+   width: 100%;
+   height: 100%;
+   top: 20px;
    opacity: 0;
    transition: all .7s ease-in-out;
    justify-content: center;
-   margin-left: 220px;
-   margin-top: 20px;
-   background: linear-gradient(to right, #0508cf, #0508ad);
-   border: 2px solid transparent;
-   border-image: linear-gradient(to right, #0508cf, #0508cf) 1;
-   border-radius: 10px;
-   border: 10px solid transparent;
 }  
 
 
@@ -296,7 +295,7 @@ ul.slides input {
    z-index: 999;
    font-size: 100px;
    line-height: 600px;
-   color: #fff;
+   color: white;
 }
 
 
@@ -374,4 +373,24 @@ input#img-4:checked ~ .carousel-dots label#img-dot-4,
 input#img-5:checked ~ .carousel-dots label#img-dot-5,
 input#img-6:checked ~ .carousel-dots label#img-dot-6 {
   opacity: 1;
+}
+.sobrenoz
+{
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   height: 200px;
+
+}
+.texto
+{
+   width: 50%;
+   color: #a2e1ff;
+   font-size: 20px;
+   font-family: 'Permanent Marker';
+   text-align: center;
+   margin-top: 8px;
 }
