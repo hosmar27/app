@@ -1,0 +1,91 @@
+body
+{
+    background-image: url("../imagens/fundo_mar.jpeg");
+    background-position-y: -140px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    align-content: center;
+    width: 100%; /*largura*/
+    height: 100vh; /*altura*/
+    margin: 0%;
+    overflow:hidden;
+
+}
+
+
+.tiradecima
+{
+    background-image: url("../imagens/tiradecima.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    flex-direction: row;
+}
+
+.quadradodados
+{
+    background: rgba(2, 32, 74, 0.5);
+    background-repeat: no-repeat;
+    width:  540px; /* largura*/
+    height: 540px; /*altura*/
+    background-size: 70%;
+    align-items: center;
+    margin-top: 180px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    border-radius: 270px;
+    font-size: 25px;
+    box-shadow: 2px 2px #031A39;
+}
+a
+{
+    color: #c5e8f0;
+}
+
+.titulo
+{
+    color:#28C0E1;
+}
+
+.carrinho
+{
+    height: 100px; /*altura*/
+    width: 150%; /* largura*/
+    margin-top: -90px;
+    padding-left: 80%;
+
+}
+
+.perfil
+{
+    height: 100px; /*altura*/
+    width: 100%; /* largura*/
+    margin-top: -100px;
+    padding-left: 90%;
+}
+
+.barra
+{
+    height: 100px; /*altura*/
+    width: 100%; /* largura*/
+    margin-top: 10px;
+    padding-left: 0%;
+}
+
+.logo
+{
+
+    width: 100%; /* largura*/
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
