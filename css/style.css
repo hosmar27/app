@@ -33,7 +33,6 @@ footer a p
 	flex-direction: column;
 	align-items: center;
 	animation: 2s;
-
 }
 
 h1 {
@@ -67,8 +66,7 @@ h1 {
 	flex-direction: column;
 }
 
-.caixa
-{
+.caixa {
 	width: 200px;
 }
 
@@ -140,4 +138,40 @@ a {
     margin-left: 90%;
     position: relative;
     align-items: center;
+}
+
+:root {
+    --background: #063970;
+  }
+
+.title
+{
+    position: relative;
+    font-size: 100px;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation-name: fade-in; /* Set animation name */
+    animation-duration: 1s; /* Set animation duration */
+    animation-delay: 2s; /* Set delay before animation starts */
+    animation-fill-mode: forwards; /* Keep final state of animation */
+}
+.meu_sub
+{
+    position: absolute;
+    animation: anima_sub 7s;
+    background-color: var(--background);
+    width: 50%;
+    left: -1500px;
+   
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
