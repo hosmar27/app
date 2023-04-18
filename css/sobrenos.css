@@ -81,7 +81,7 @@ body
  background-size: cover;
  color: #cdcdcd;
  font-family: "Avenir Next", "Avenir", sans-serif;
- overflow: hidden;
+ overflow-x: hidden;
  height: 100vh;
 }
 
