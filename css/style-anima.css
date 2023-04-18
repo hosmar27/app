@@ -47,6 +47,7 @@ body
     background-color:  var(--background);
     background-image: url( "aguateste.avif");
     font-family: 'Permanent Marker', cursive;
+    overflow: hidden;
 }
 
 @keyframes sub 
