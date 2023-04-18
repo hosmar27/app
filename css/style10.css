@@ -48,3 +48,19 @@ body
     display: flex;
     z-index: 20;
 }
+
+.dadospedido
+{
+    background: rgba(2, 32, 74, 0.5);
+    background-repeat: no-repeat;
+    width:  540px; /* largura*/
+    height: 540px; /*altura*/
+    background-size: 70%;
+    margin-top: 190px;
+    margin-left: 50%;
+    left: -270px;
+    position: absolute;
+    display:flex;
+    font-size: 25px;
+    box-shadow: 2px 2px #031A39;
+}
