@@ -2,7 +2,7 @@
 
 body
 {
-    background-image: url("fundo_mar.jpeg");
+    background-image: url("../imagens/fundo_mar.jpeg");
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
@@ -17,7 +17,7 @@ body
 
 .tiradecima
 {
-    background-image: url("tiradecima.png");
+    background-image: url("../imagens/tiradecima.png");
     background-repeat: no-repeat;
     position: fixed;
     width: 100%;
