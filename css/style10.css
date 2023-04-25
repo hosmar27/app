@@ -49,18 +49,28 @@ body
     z-index: 20;
 }
 
-.dadospedido
+.dadocarrinho
 {
-    background: rgba(2, 32, 74, 0.5);
+    /*background: rgba(2, 32, 74, 0.5);*/
+    background: rgb(244, 237, 252);
     background-repeat: no-repeat;
-    width:  540px; /* largura*/
-    height: 540px; /*altura*/
-    background-size: 70%;
-    margin-top: 190px;
-    margin-left: 50%;
-    left: -270px;
+    width:  700px; /* largura*/
+    height: 400px; /*altura*/
     position: absolute;
     display:flex;
+    flex-direction: column;
+    border-radius: 70px;
     font-size: 25px;
     box-shadow: 2px 2px #031A39;
+    z-index: 100;
+}
+
+.pacote
+{
+
+}
+
+.adcionais
+{
+
 }
