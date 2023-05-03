@@ -58,6 +58,11 @@ a
     margin-top: 20px;
 }
 
+p
+{
+  color: aliceblue;
+  font-family: 'Roboto Slab', serif;
+}
 .dadocarrinho
 {
     background: rgba(2, 32, 74, 0.5);
@@ -87,15 +92,16 @@ a
 {
     width:  300px; /* largura*/
     height: 300px; /*altura*/
-    background-color: #9d28e188;
+    /*background-color: #9d28e188;*/
     align-items: center;
+    
 }
 
 .adicionais
 {
     width:  300px; /* largura*/
     height: 300px; /*altura*/
-    background-color: #28bfe178;
+    /*background-color: #28bfe178;*/
     align-items: center;
 }
 
