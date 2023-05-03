@@ -24,8 +24,8 @@ footer a p
 .container {
 	width: 400px;
 	margin: 100px auto;
-	background-color: #fff;
-	border: 1px solid #ddd;
+	background-color: rgba(2, 32, 74, 0.37);
+	border: 1px solid black;
 	padding: 30px;
 	border-radius: 5px;
 	/*box-shadow: #d3d3d3*/
@@ -38,7 +38,7 @@ footer a p
 h1 {
 	font-size: 24px;
 	margin-bottom: 20px;
-	color: rgba(0, 171, 238, 0.596);
+	color: white;
 }
 
 .lacuna {
@@ -72,11 +72,11 @@ h1 {
 
 .lacuna label {
 	margin-bottom: 10px;
-	color: rgb(0, 170, 212);
+	color: white;
 }
 
 .lacuna input[type="text"],
-.Lacuna input[type="email"],
+.lacuna input[type="email"],
 .lacuna input[type="password"] {
 	width: 90%;
 	padding: 10px;
@@ -87,7 +87,7 @@ h1 {
 }
 
 .lacuna input[type="text"]::placeholder,
-.Lacuna input[type="email"]::placeholder,
+.lacuna input[type="email"]::placeholder,
 .lacuna input[type="password"]::placeholder {
 	color: #bbb;
 }
