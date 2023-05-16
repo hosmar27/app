@@ -68,8 +68,8 @@ p
 {
     background: rgba(2, 32, 74, 0.5);
     background-repeat: no-repeat;
-    width:  800px; /* largura*/
-    height: 500px; /*altura*/
+    width:  700px; /* largura*/
+    height: 400px; /*altura*/
     display:flex;
     flex-direction: column;
     border-radius: 70px;
@@ -81,17 +81,22 @@ p
 }
 .organizaitens
 {
+    display:flex;
     flex-direction: row;
-    background-color: #28C0E1;
-    width: 700px;
+    width: 600px;
     height: 400px;
 }
 
 .imgseadd
 {
-    background-color: rgba(128, 0, 128, 0.513);
     width: 350px;
     height: 400px;
+}
+
+.adicional
+{
+  width: 350px;
+  height: 400px;
 }
 
 .dadosperfil  /*ESTILO/TAMANHOOOOOOOO*/
