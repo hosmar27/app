@@ -69,7 +69,7 @@ p
     background: rgba(2, 32, 74, 0.5);
     background-repeat: no-repeat;
     width:  700px; /* largura*/
-    height: 400px; /*altura*/
+    height: 440px; /*altura*/
     display:flex;
     flex-direction: column;
     border-radius: 70px;
@@ -78,6 +78,19 @@ p
     z-index: 100;
     margin-top: 230px;
     align-items: center;
+}
+
+.pagar
+{
+  background-color: #032046ea;
+  width: 50%;
+  height: 30px;
+  border-radius: 10px;
+  border-color: #080808;
+  align-items: center;
+  display:flex;
+  font-size: 20px;
+  cursor: pointer;
 }
 .organizaitens
 {
