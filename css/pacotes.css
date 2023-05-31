@@ -15,6 +15,7 @@
  }
  .esq
  {
+
     gap: 16px;
     height: 100%;
     display: flex;
@@ -25,6 +26,20 @@
     align-content: center;
     flex-direction: row;
     padding-left:-10%;
+ }
+ .meio
+ {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ div .meio .h1_pacotes {
+  margin-top: 1rem; 
+  font-family: sans-serif;
+  color: #01223d;
+  font-weight: 900;
+  font-size: 3rem;
  }
  .pqp {
    gap: 16px;
@@ -52,7 +67,7 @@
  }
  .dir
  {
-    width: 50%;
+    width: %;
     height: 100%;
     display: flex;
     align-items: center;
@@ -67,7 +82,10 @@
   width: 60px;
   height: 55px;
  }
- 
+ .h1_pacotes
+ {
+  width: 3%;
+ }
  
  
  body
