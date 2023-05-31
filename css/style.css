@@ -43,7 +43,7 @@ h1 {
 }
 
 .lacuna {
-	width: 90%;
+	width: 60%;
 }
 
 .email {
@@ -94,16 +94,17 @@ h1 {
 	color: #bbb;
 }
 
-.lacuna input[type="submit"] {
-	display: block;
-	background-color: #1300b9;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	padding: 10px 20px;
-	font-size: 16px;
-	margin-top: 20px;
-	width: 200px;
+input[type="submit"] {
+    display: block;
+    background-color: #1300b9;
+    color: #fff;
+    /* border: none; */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 200px;
+	z-index: auto;
 }
 
 p {
