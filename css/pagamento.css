@@ -1,4 +1,21 @@
 @import url('https://fonts.googeapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+body
+{
+  background-image: url(../imagens/fundo_mar.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+  background-size: 100%;
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  align-content: center;
+}
 
 *{
     font-family: 'Poppins',sans-serif;
@@ -11,90 +28,110 @@
     transition: all .2s linear;
 }
 
-.container{
-    display:flex;
-    justify-content: center;
+a
+{
+    color: #96e3f4;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'DynaPuff', cursive;
+    margin-top: 30px;
     align-items: center;
-    padding: 25px;
-    min-height: 100vh;
-    background: linear-gradient(90deg,);
-    background: linear-gradient(90deg);
-    background-image: url(/imagens/fundo_mar.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    padding-bottom: 70px;
+    display:flex;
+    width: 60px;
 }
 
-input{
+/**input
+{
     box-shadow: #000;
 }
+**/
 
-.container form{
+.container form /** dados pagamento **/
+{
+    margin-top: 25%;
     padding: 20px;
-    width: 700px;
-    background: #fff;
+    width: 620px;
+    height: 500px;
+    background:#031a397c;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    border-radius: 40px;
+    border-color: #000;
 }
 
-.contaner form .row{
+.contaner form .row /** linha **/
+{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-.contaner form .row .col{
+.contaner form .row .col /** coluna **/
+{
     flex: 1 1 250px;
 }
 
-.contaner form .row .col .title{
+.contaner form .row .col .title /** linha, coluna, titulo **/
+{
     font-size: 20px;
     color: #333;
     padding-bottom: 5px;
     text-transform: uppercase;
 }
 
-.contaner form .row .col .inputBox{
+.contaner form .row .col .inputBox /** linha, coluna **/
+{
     margin: 15px 0;
 }
 
-.contaner form .row .col .inputBox span{
+.contaner form .row .col .inputBox span /** linha, coluna **/
+{
     margin-bottom: 10px;
     display: block;
 }
 
-.contaner form .row .col .inputBox input{
+.contaner form .row .col .inputBox input /** linha, coluna **/
+{
     width: 100%;
     border: 1px solid #ccc;
     padding: 10px 15px;
     text-transform: none;
 }
 
-.contaner form .row .col .inputBox input:focus{
+.contaner form .row .col .inputBox input:focus /** linha, coluna **/
+{
     border: 1px solid #333;
 }
 
-.contaner form .row .col .flex{
+.contaner form .row .col .flex /** linha, coluna **/
+{
     display: flex;
     gap: 15px;
 }
 
-.contaner form .row .col .inputBox img{
+.contaner form .row .col .inputBox img /** linha, coluna, imagem **/
+{
     height: 34px;
     margin-top: 5px;
     filter: drop-shadow(0 0 1px #000);
 }
 
-.container form .submit-btn{
-    width: 100%;
+.container form .submit-btn /** botão pagar **/
+{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 180px;
+    height: 30px;
     padding: 12px;
     font-size: 17px;
-    background: #1E90FF;
+    background: #06a7cb;
     margin: top 5px;
     color: #fff;
     cursor: pointer;
+    border-radius: 20px;
 }
 
-.container form .submit-btn:hover{
+.container form .submit-btn:hover
+{
     background: #87CEFA;
 }
