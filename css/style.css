@@ -39,6 +39,7 @@ h1 {
 	font-size: 24px;
 	margin-bottom: 20px;
 	color: white;
+
 }
 
 .lacuna {
@@ -116,14 +117,16 @@ a {
 }
 .meu_texto
 {   
+	/*text-shadow: 0 0 20px white, 0 0 10px #0000FF;*/
     animation:  3s;
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 120px;
+	font-weight: bolder;
+    font-size: 140px;
     color: rgb(0, 52, 196);
     text-shadow: 1px 1px black;
-    font-family: fantasy;
+    font-family: 'DynaPuff', cursive;
 }
 .bolhas
 {

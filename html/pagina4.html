@@ -22,22 +22,23 @@
 
 		<h1>Login</h1>
 
-		<div class="lacuna">
+			<div class="lacuna">
 
-			<div class="nome">
-				<label for="nome">Nome de Usuário:</label>
-				<input class="caixa" type="text" id="username" name="username" placeholder="Digite seu nome de usuário">
-			</div>
+				<form action="../php/verifica.php" method="post">
+					<div class="senha">
+						<label for="nome">Nome de Usuário:</label>
+						<input class="caixa" type="text" id="nome" name="nome" placeholder="Digite seu nome de usuário">
+					</div>
 
-			<div class="senha">
-				<label for="senha">Senha:</label>
-				<input class="caixa" type="password" id="senha" name="senha" placeholder="Digite sua senha novamente">
-			</div>
+					<div class="senha">
+						<label for="senha">Senha:</label>
+						<input class="caixa" type="password" id="senha" name="senha" placeholder="Digite sua senha">
+					</div>
 
-			<input type="submit" value="Entrar">
-		
-		<p>Não tem uma conta? <a href="pagina5.html">Cadastre-se</a></p>
-
+					<input type="submit" name="inserir" value="Concluir cadastro">
+				
+					<p>Não tem uma conta? <a href="pagina5.html">Cadastre-se</a></p>
+				</form>
 			</div>
     	</div>
 
