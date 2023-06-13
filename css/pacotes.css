@@ -1,7 +1,28 @@
-*{
+*:not(dialog) {
     margin: 0;
     padding: 0;
  }
+
+ dialog {
+  border-radius: 5px;
+  border: 0;
+
+  &::backdrop {
+  	background: rgba(0, 0, 0, 0.4);
+	}
+
+  &[open], 
+	&::backdrop {
+		animation: showModal 500ms ease;
+	}
+ }
+
+ @keyframes showModal {
+  0% {
+    opacity: 0;
+  }
+}
+
  header
  {
     width: 100%;

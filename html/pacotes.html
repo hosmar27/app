@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
-<body>
+<body>   
     <header>
       <div class="esq">
         <div class="pqp">
@@ -67,10 +67,96 @@
 
       <div class="bals">
        <h1 class="h1_pacotes">Pacotes:</h1>   
-        
+       <div id="pacote_botao_1">
+         pacote 1
+       </div>
+
+       <dialog id="pacote_1">
+        <div> 
+          pacote 1
+
+          <button id="cancelar_pacote_1">
+            cancelar
+          </button>
+        </div>
+      </dialog>
+
+      <div id="pacote_botao_2">
+        pacote 2
+      </div>
+
+      <dialog id="pacote_2">
+       <div> 
+         pacote 2
+
+         <button id="cancelar_pacote_2">
+           cancelar
+         </button>
+       </div>
+     </dialog>
+
+     <div id="pacote_botao_3">
+      pacote 3
+    </div>
+
+    <dialog id="pacote_3">
+     <div> 
+       pacote 3
+
+       <button id="cancelar_pacote_3">
+         cancelar
+       </button>
+     </div>
+   </dialog>
       </div>
     </div>
   </div>
 </div>
+
+<script> 
+(function () {
+  var updateButton = document.getElementById("pacote_botao_1");
+  var cancelButton = document.getElementById("cancelar_pacote_1");
+  var favDialog = document.getElementById("pacote_1");
+
+  // O botão Update abre uma Dialog
+  updateButton.addEventListener("click", function () {
+    favDialog.showModal();
+  });
+
+  // O botão cancelButtom fecha uma Dialog
+  cancelButton.addEventListener("click", function () {
+    favDialog.close();
+  });
+
+  var updateButton2 = document.getElementById("pacote_botao_2");
+  var cancelButton2 = document.getElementById("cancelar_pacote_2");
+  var favDialog2 = document.getElementById("pacote_2");
+
+  // O botão Update abre uma Dialog
+  updateButton2.addEventListener("click", function () {
+    favDialog2.showModal();
+  });
+
+  // O botão cancelButtom fecha uma Dialog
+  cancelButton2.addEventListener("click", function () {
+    favDialog2.close();
+  });
+
+  var updateButton3 = document.getElementById("pacote_botao_3");
+  var cancelButton3 = document.getElementById("cancelar_pacote_3");
+  var favDialog3 = document.getElementById("pacote_3");
+
+  // O botão Update abre uma Dialog
+  updateButton3.addEventListener("click", function () {
+    favDialog3.showModal();
+  });
+
+  // O botão cancelButtom fecha uma Dialog
+  cancelButton3.addEventListener("click", function () {
+    favDialog3.close();
+  });
+})();
+</script>
 </body>
 </html>
