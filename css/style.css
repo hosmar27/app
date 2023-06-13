@@ -33,13 +33,12 @@ footer a p
 	flex-direction: column;
 	align-items: center;
 	animation: 2s;
+	margin-bottom: 50px;
 }
 
 h1 {
 	font-size: 24px;
-	margin-bottom: 20px;
 	color: white;
-
 }
 
 .lacuna {

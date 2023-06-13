@@ -88,7 +88,7 @@
  }
  .dir
  {
-    width: %;
+    
     height: 100%;
     display: flex;
     align-items: center;
@@ -107,7 +107,6 @@
  {
   width: 3%;
  }
- 
  
  body
  {
@@ -258,3 +257,13 @@
   
  }
 
+.aviso{
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%s;
+  width: 30%;
+  height: 20%;
+  background-color: red;
+}
