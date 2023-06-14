@@ -48,7 +48,7 @@ a
 }
 **/
 
-.container form /** dados pagamento **/
+.container form /** quadrado **/
 {
     margin-top: 25%;
     padding: 20px;
@@ -58,6 +58,7 @@ a
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     border-radius: 40px;
     border-color: #000;
+    align-items: center;
 }
 
 .contaner form .row /** linha **/
@@ -104,7 +105,7 @@ a
     border: 1px solid #333;
 }
 
-.contaner form .row .col .flex /** linha, coluna **/
+.contaner form .row .col .flex /** flexivel **/
 {
     display: flex;
     gap: 15px;
@@ -117,23 +118,23 @@ a
     filter: drop-shadow(0 0 1px #000);
 }
 
-.container form .submit-btn /** botão pagar **/
+.pagar /** botão pagar **/
 {
     display: flex;
     align-items: center;
     align-content: center;
-    width: 180px;
+    width: 170px;
     height: 30px;
-    padding: 12px;
-    font-size: 17px;
+    font-size: 18px;
     background: #06a7cb;
     margin: top 5px;
     color: #fff;
     cursor: pointer;
     border-radius: 20px;
+    align-items: center;
 }
 
-.container form .submit-btn:hover  /** quando clicar no botão ficar dessa cor **/
+.pagar:hover  /** quando clicar no botão ficar dessa cor **/
 {
     background: #87CEFA;
 }

@@ -80,18 +80,26 @@ p
     align-items: center;
 }
 
-.pagar
+.pagar /** botão pagar **/
 {
-  background-color: #032046ea;
-  width: 50%;
-  height: 30px;
-  border-radius: 10px;
-  border-color: #080808;
+  display: flex;
   align-items: center;
-  display:flex;
-  font-size: 20px;
+  align-content: center;
+  width: 100px;
+  height: 30px;
+  font-size: 25px;
+  background: #06a7cb;
+  margin: top 5px;
+  color: #fff;
   cursor: pointer;
+  border-radius: 20px;
 }
+
+.pagar:hover  /** quando clicar no botão ficar dessa cor **/
+{
+    background: #87CEFA;
+}
+
 .organizaitens
 {
     display:flex;
