@@ -1,29 +1,4 @@
-*:not(dialog) {
-    margin: 0;
-    padding: 0;
- }
-
- dialog {
-  border-radius: 5px;
-  border: 0;
-
-  &::backdrop {
-  	background: rgba(0, 0, 0, 0.4);
-	}
-
-  &[open], 
-	&::backdrop {
-		animation: showModal 500ms ease;
-	}
- }
-
- @keyframes showModal {
-  0% {
-    opacity: 0;
-  }
-}
-
- header
+header
  {
     width: 100%;
     height: 100px;
@@ -103,15 +78,13 @@
   width: 60px;
   height: 55px;
  }
- .h1_pacotes
- {
-  width: 3%;
- }
+ 
  
  body
  {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
   
   /* make it look decent enough */
   background-image: url(../imagens/fundo_mar.jpeg);
@@ -119,7 +92,7 @@
   background-position: center;
   background-size: cover;
   color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
+
   overflow-x: hidden;
   height: 100vh;
  }
@@ -252,18 +225,46 @@
  {
   transform: none;
  }
- .balls
- {
-  
- }
 
 .aviso{
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%s;
-  width: 30%;
-  height: 20%;
-  background-color: red;
+    display: none;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    top: 50%;
+    left: 42%;
+    width: 15%;
+    height: 10%;
+    background-color: white;
+    color: black;
+    border: 5px black solid;
+}
+
+.bals{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.balls{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.pacote{
+  width: 15%;
+  height: 35%;
+  background-color: #01223d;
+  border-radius: 5px;
+  padding: 10px;
+  color: #A2E1FF;
 }
