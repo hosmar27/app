@@ -71,7 +71,7 @@ header
     flex-direction: row;
     padding-right: 30px;
     gap: 16px;
-     margin-left: 800px;
+    margin-left: 800px;
  }
  .perfil
  {
@@ -246,10 +246,12 @@ header
 
 .bals{
   height: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   flex-direction: row;
   justify-content: space-between;
   width: 70%;
+
 }
 
 .balls{
@@ -261,10 +263,18 @@ header
 }
 
 .pacote{
-  width: 15%;
-  height: 35%;
+  width: 80%;
+  height: 80%;
   background-color: #01223d;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 20px;
   color: #A2E1FF;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.pacote img{
+  width: 100%;
+  height: 70%;
+}
+

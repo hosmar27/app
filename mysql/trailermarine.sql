@@ -18,6 +18,6 @@ CREATE TABLE IF NOT EXISTS pacote (
     imagem mediumblob NOT NULL
 );
 
-Insert into pacote (nome, valor, imagem) values(
-    ('pacote barbados', 'R$5.000,00','../imagem/pacote1.png')
-)
+INSERT INTO pacote (nome,valor) values(
+    'pacote barbados','R$5.000,00'
+);

@@ -66,53 +66,127 @@
     <div class="balls">
       <h1 class="h1_pacotes">Pacotes:</h1> 
 
-      <div class="bals">
+<div class="bals">
       
+  <div class="pacote">
+
       <?php
 
-        include("../php/conecta.php");
+      include("../php/conecta.php");
 
-          $nome  = $_POST["nome"];
-          $valor  = $_POST["valor"];
-          $imagem = $_POST["imagem"];
+      // Executar consulta
+      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
+      $comando = $sql->execute();
 
-          // Executar consulta
-          $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote") ;
-          $comando = $sql->execute();
+      if ($sql->rowCount() > 0) {
+          // Loop através dos resultados da consulta
+          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+              $imagem = $row["imagem"];
+              $nome = $row["nome"];
+              $valor = $row["valor"];
 
-          if ($comando->num_rows > 0) {
-              // Loop através dos resultados da consulta
-              while ($row = $comando->fetch_assoc()) {
-                  $imagem = $row["imagem"];
-                  $nome = $row["nome"];
-                  $valor = $row["valor"];
-
-                  // Faça algo com os valores e imagem, como exibi-los na página
-                  echo '<img src="' . $imagem . '" alt="Imagem" /><br>';
-                  echo "nome: " . $nome . "<br>";
-                  echo "valor: " . $valor . "<br>";
-              }
-          } else {
-              echo "0 resultados encontrados";
+              // Faça algo com os valores e imagem, como exibi-los na página
+              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
+              echo "" . $nome . "<br>";
+              echo "" . $valor . "<br>";
           }
+      } else {
+          echo "0 resultados encontrados";
+      }
 
-          header("Location: ../html/index.html");
+      //header("Location: ../html/index.html");
       ?>
+  </div>
 
-      <div class="pacote" id="pacote_botao_2" onclick="bct('pacote2')">
-        <img src="../imagens/pacote1.png" width="100%" height="70%">
-        pacote 2
-      </div>
+  <div class="pacote">
 
-     <div class="pacote" id="pacote_botao_3" onclick="bct('pacote3')">
-      <img src="../imagens/pacote1.png" width="100%" height="70%">
-      pacote 3
-    </div>
+      <?php
 
-    <div class="pacote" id="pacote_botao_4" onclick="bct('pacote4')">
-      <img src="../imagens/pacote1.png" width="100%" height="70%">
-      pacote 4
-    </div>
+      include("../php/conecta.php");
+
+      // Executar consulta
+      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
+      $comando = $sql->execute();
+
+      if ($sql->rowCount() > 0) {
+          // Loop através dos resultados da consulta
+          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+              $imagem = $row["imagem"];
+              $nome = $row["nome"];
+              $valor = $row["valor"];
+
+              // Faça algo com os valores e imagem, como exibi-los na página
+              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
+              echo " " . $nome . "<br>";
+              echo " " . $valor . "<br>";
+          }
+      } else {
+          echo "0 resultados encontrados";
+      }
+
+      //header("Location: ../html/index.html");
+      ?>
+  </div>
+
+  <div class="pacote">
+
+      <?php
+
+      include("../php/conecta.php");
+
+      // Executar consulta
+      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
+      $comando = $sql->execute();
+
+      if ($sql->rowCount() > 0) {
+          // Loop através dos resultados da consulta
+          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+              $imagem = $row["imagem"];
+              $nome = $row["nome"];
+              $valor = $row["valor"];
+
+              // Faça algo com os valores e imagem, como exibi-los na página
+              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
+              echo " " . $nome . "<br>";
+              echo " " . $valor . "<br>";
+          }
+      } else {
+          echo "0 resultados encontrados";
+      }
+
+      //header("Location: ../html/index.html");
+      ?>
+  </div>
+
+  <div class="pacote">
+
+      <?php
+
+      include("../php/conecta.php");
+
+      // Executar consulta
+      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
+      $comando = $sql->execute();
+
+      if ($sql->rowCount() > 0) {
+          // Loop através dos resultados da consulta
+          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+              $imagem = $row["imagem"];
+              $nome = $row["nome"];
+              $valor = $row["valor"];
+
+              // Faça algo com os valores e imagem, como exibi-los na página
+              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
+              echo " " . $nome . "<br>";
+              echo " " . $valor . "<br>";
+          }
+      } else {
+          echo "0 resultados encontrados";
+      }
+
+      //header("Location: ../html/index.html");
+      ?>
+  </div>
 
    <div class="aviso" id="aviso">
     <p id="nome">pedido</p>
@@ -132,7 +206,6 @@
 
     document.getElementById('aviso').style.display = 'flex';
     document.getElementById('nome').innerHTML = x;
-    document.getElementById('imagem').innerHTML = x;
   }
 
   function pnss(){
