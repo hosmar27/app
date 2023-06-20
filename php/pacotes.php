@@ -70,125 +70,27 @@
       <h1 class="h1_pacotes">Pacotes:</h1> 
 
 <div class="bals">
-      
-  <div class="pacote" onclick="bct('pacote barbados','500')">
 
-      <?php
+<?php
 
-      include("../php/conecta.php");
+  include("../php/conecta.php");
 
-      // Executar consulta
-      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
-      $comando = $sql->execute();
+  $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
+  $sql->execute();
 
-      if ($sql->rowCount() > 0) {
-          // Loop através dos resultados da consulta
-          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-              $imagem = $row["imagem"];
-              $nome = $row["nome"];
-              $valor = $row["valor"];
+  while ($linhas = $sql->fetch(PDO::FETCH_ASSOC)) {
+      $imagem = $linhas["imagem"];
+      $nome = $linhas["nome"];
+      $valor = $linhas["valor"];
+      echo "
+      <div class='pacote' onclick=\"bct('pacote barbados','500')\">
+        <img src='" . base64_encode($imagem) . "' alt='imagem' /><br>
+        $nome
+        $valor
+      </div>";
+  }
+?>
 
-              // Faça algo com os valores e imagem, como exibi-los na página
-              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
-              echo "" . $nome . "<br>";
-              echo "" . $valor . "<br>";
-          }
-      } else {
-          echo "0 resultados encontrados";
-      }
-
-      //header("Location: ../html/index.html");
-      ?>
-  </div>
-
-  <div class="pacote" onclick="bct('pacote barbados','500')">
-
-      <?php
-
-      include("../php/conecta.php");
-
-      // Executar consulta
-      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
-      $comando = $sql->execute();
-
-      if ($sql->rowCount() > 0) {
-          // Loop através dos resultados da consulta
-          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-              $imagem = $row["imagem"];
-              $nome = $row["nome"];
-              $valor = $row["valor"];
-
-              // Faça algo com os valores e imagem, como exibi-los na página
-              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
-              echo " " . $nome . "<br>";
-              echo " " . $valor . "<br>";
-          }
-      } else {
-          echo "0 resultados encontrados";
-      }
-
-      //header("Location: ../html/index.html");
-      ?>
-  </div>
-
-  <div class="pacote" onclick="bct('pacote barbados')">
-
-      <?php
-
-      include("../php/conecta.php");
-
-      // Executar consulta
-      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
-      $comando = $sql->execute();
-
-      if ($sql->rowCount() > 0) {
-          // Loop através dos resultados da consulta
-          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-              $imagem = $row["imagem"];
-              $nome = $row["nome"];
-              $valor = $row["valor"];
-
-              // Faça algo com os valores e imagem, como exibi-los na página
-              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
-              echo " " . $nome . "<br>";
-              echo " " . $valor . "<br>";
-          }
-      } else {
-          echo "0 resultados encontrados";
-      }
-
-      //header("Location: ../html/index.html");
-      ?>
-  </div>
-
-  <div class="pacote" onclick="bct('pacote barbados')" >
-
-      <?php
-
-      include("../php/conecta.php");
-
-      // Executar consulta
-      $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
-      $comando = $sql->execute();
-
-      if ($sql->rowCount() > 0) {
-          // Loop através dos resultados da consulta
-          while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-              $imagem = $row["imagem"];
-              $nome = $row["nome"];
-              $valor = $row["valor"];
-
-              // Faça algo com os valores e imagem, como exibi-los na página
-              echo '<img src="data:image/jpeg;base64,' . base64_encode($imagem) . '" alt="Imagem" /><br>';
-              echo " " . $nome . "<br>";
-              echo " " . $valor . "<br>";
-          }
-      } else {
-          echo "0 resultados encontrados";
-      }
-
-      //header("Location: ../html/index.html");
-      ?>
   </div>
 
    <div class="aviso" id="aviso">

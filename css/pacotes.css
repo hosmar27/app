@@ -252,7 +252,7 @@ header
   flex-direction: row;
   justify-content: space-between;
   width: 70%;
-
+  row-gap: 30px;
 }
 
 .balls{
