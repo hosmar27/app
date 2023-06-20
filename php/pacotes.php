@@ -8,6 +8,9 @@
     <link href="../css/pacotes.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>   
     <header>
@@ -68,7 +71,7 @@
 
 <div class="bals">
       
-  <div class="pacote">
+  <div class="pacote" onclick="bct('pacote barbados','500')">
 
       <?php
 
@@ -98,7 +101,7 @@
       ?>
   </div>
 
-  <div class="pacote">
+  <div class="pacote" onclick="bct('pacote barbados','500')">
 
       <?php
 
@@ -128,7 +131,7 @@
       ?>
   </div>
 
-  <div class="pacote">
+  <div class="pacote" onclick="bct('pacote barbados')">
 
       <?php
 
@@ -158,7 +161,7 @@
       ?>
   </div>
 
-  <div class="pacote">
+  <div class="pacote" onclick="bct('pacote barbados')" >
 
       <?php
 
@@ -190,6 +193,7 @@
 
    <div class="aviso" id="aviso">
     <p id="nome">pedido</p>
+    <p id="preco">pedido</p>
     <button id="cancelar_pacote_1" onclick="pnss()">
       cancelar
     </button>
@@ -202,10 +206,11 @@
 
 </body>
 <script>
-  function bct(x){
+  function bct(x,y){
 
     document.getElementById('aviso').style.display = 'flex';
     document.getElementById('nome').innerHTML = x;
+    document.getElementById('preco').innerHTML = y;
   }
 
   function pnss(){

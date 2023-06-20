@@ -1,3 +1,4 @@
+
 header
  {
     width: 100%;
@@ -32,10 +33,10 @@ header
  }
  div .meio .h1_pacotes {
   margin-top: 1rem; 
-  font-family: sans-serif;
+  font-family: dynapuff;
   color: #01223d;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 4rem;
  }
  .pqp {
    gap: 16px;
@@ -89,12 +90,12 @@ header
   /* make it look decent enough */
   background-image: url(../imagens/fundo_mar.jpeg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   color: #cdcdcd;
-
   overflow-x: hidden;
   height: 100vh;
+  width: 100%;
  }
  
  #menuToggle
