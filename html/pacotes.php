@@ -51,7 +51,9 @@
 
       </div>
         <div class="dir">
+        <a href="pag11.html" target="_blank">
             <img src="../imagens/submariano.png">
+          </a>   
             <img src="../imagens/icone (3).png" class="perfil" >
         </div>
       </div>  
