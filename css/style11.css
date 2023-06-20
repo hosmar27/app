@@ -85,7 +85,7 @@ p
   display: flex;
   align-items: center;
   align-content: center;
-  width: 100px;
+  width: 130px;
   height: 30px;
   font-size: 25px;
   background: #06a7cb;
@@ -97,21 +97,28 @@ p
 
 .pagar:hover  /** quando clicar no botão ficar dessa cor **/
 {
-    background: #87CEFA;
+  background: #87CEFA;
 }
 
+.organizabotao
+{
+  display:flex;
+  flex-direction: row;
+  width: 90%;
+  height: 60px;
+}
 .organizaitens
 {
-    display:flex;
-    flex-direction: row;
-    width: 600px;
-    height: 400px;
+  display:flex;
+  flex-direction: row;
+  width: 600px;
+  height: 400px;
 }
 
 .imgseadd
 {
-    width: 350px;
-    height: 400px;
+  width: 350px;
+  height: 400px;
 }
 
 .adicional
