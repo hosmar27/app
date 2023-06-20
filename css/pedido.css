@@ -150,7 +150,7 @@ p
 #menuToggle a /*estilo das escritas*/
 {
   text-decoration: none;
-  color: #232323;
+  color: #a2e1ff;
   transition: color 0.3s ease;
 }
 
@@ -180,7 +180,7 @@ p
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: #a2e1ff;
   border-radius: 3px;
   z-index: 1;
   /*aqui faz aparecer o quadrado branco*/
@@ -205,7 +205,7 @@ p
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #a2e1ff;
 }
 /*
  * esconde o risquinho do meio
@@ -231,7 +231,7 @@ p
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed7a;
+  background: #01223d;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* para interromper a oscilação do texto no safari */
