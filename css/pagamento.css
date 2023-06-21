@@ -6,7 +6,6 @@ body
   background-image: url(../imagens/fundo_mar.jpeg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
   font-family: "Avenir Next", "Avenir", sans-serif;
   overflow-x: hidden;
   height: 100vh;
@@ -116,6 +115,15 @@ a
     height: 34px;
     margin-top: 5px;
     filter: drop-shadow(0 0 1px #000);
+}
+
+.organizab
+{
+    position: absolute;
+    width: 500px;
+    height: 60px;
+    flex-direction: row;
+    background-color: #06cb55;
 }
 
 .pagar /** botão pagar **/

@@ -63,6 +63,27 @@ p
   color: aliceblue;
   font-family: 'Roboto Slab', serif;
 }
+
+.pagar /** botão pagar **/
+{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: 130px;
+  height: 30px;
+  font-size: 25px;
+  background: #06a7cb;
+  margin: top 5px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.pagar:hover  /** quando clicar no botão ficar dessa cor **/
+{
+  background: #87CEFA;
+}
+
 .dadocarrinho
 {
     background: rgba(2, 32, 74, 0.5);
@@ -91,7 +112,7 @@ p
 .pacote
 {
     width:  300px; /* largura*/
-    height: 300px; /*altura*/
+    height: 320px; /*altura*/
     /*background-color: #9d28e188;*/
     align-items: center;
     
