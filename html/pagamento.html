@@ -9,17 +9,49 @@
 </head>
 <body>
 
+<div class="tiradecima">
+    <nav class="navegador" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Info</li></a>
+            <a href="#"><li>Contato</li></a>
+            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+          </ul>
+        </div>
+    </nav>
+    <div class="carrinho">
+        <a href="carrinho.html" target="_blank">
+            <img src="../imagens/carrinho.png" width="130px">
+        </a>
+    </div> 
+    <div class="perfil">      
+        <img src="../imagens/perfil.png" width="100px">
+    </div> 
+    
+</div> 
+
 <div class="container">
   
   <form action="">
 
+    <div class="organizatitulo">
+      <a>
+          Pagamento
+      </a>
+  </div>
+
     <div class="row">
 
-      <div class="col">
-        <a>Pagamento</a>
-        <br>
-        <h3 class="title">endereço da cobrança</h3>
-        <br>
+
+      <div class="title">
+        <a class="text">endereço da cobrança </a>
+
         <div class="inputBox">
           <span>nome completo :</span>
           <input type="text" placeholder="nome completo">
@@ -84,12 +116,13 @@
         <span>cep :</span>
         <input type="text" placeholder="00-000.000">
       </div>
-      <br>
 
       <div class="col">
-      
-        <h3 class="title">pagamento</h3>
-        <br>
+        <div class="organizatitul">
+          <a class="text">pagamento</a>
+        </div>
+        
+    
         <div class="inputBox">
           <span>cartões aceitos</span>
           <img src="..imagens/card_img.png" alt="">
@@ -119,21 +152,22 @@
           <span>cep :</span>
           <input type="text" placeholder="00-000.000">
         </div>
-
+        <br>
+        <div class="organizab">
+          <div class="pagar">
+            <p>
+                concluir pagamento
+            </p>
+          </div>
+          <div class="pagar">
+            <p>
+                voltar
+            </p>
+          </div>
+        </div>  
       </div>  
     </div>
-    <br>
-    <div class="organizab">
-      <div class="pagar">
-        <p>
-            concluir pagamento
-        </p>
-      </div>
-      <div class="pagar">
-        <p>
-            voltar
-        </p>
-      </div>
+ 
   </div>
   </form>
   
