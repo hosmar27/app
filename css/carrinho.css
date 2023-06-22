@@ -106,6 +106,7 @@ p
   flex-direction: row;
   width: 90%;
   height: 60px;
+  justify-content: space-around;
 }
 .organizaitens
 {
