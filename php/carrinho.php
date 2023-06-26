@@ -49,7 +49,7 @@
         </div>
     </nav>
     <div class="carrinho">
-        <a href="carrinho.php" target="_blank">
+        <a href="carrinho.html" target="_blank">
             <img src="../imagens/carrinho.png" width="130px">
         </a>
     </div> 
@@ -62,7 +62,7 @@
 <datafield class="dadosperfil"> 
         <legend> Dados Pessoais</legend>
         <br>
-        Nome: <php echo($nome); ?>
+        Nome: <input type=”text” id=”nome”>
         <br> <br>
         @Email: <input type=”text” id=”email”>
         <br> <br>
@@ -83,6 +83,54 @@
         <img src="../imagens/meucarrinho.png" width="50px">
     </div>
 
+    <div class="organizaitens">
+        <div class="imgseadd">
+            <br>
+            <a>
+                Pacote:
+            </a>
+            <br>
+            <img src="../imagens/fotos (3).png" width="150px">
+            <br>
+            <a>
+                Pacote para Havaí
+            </a>
+            <br><br>
+            <p>
+                 Família R$: 15000,00
+            </p>
+            <div class="organizabotao">
+                <div class="pagar" href="https://www.google.com.br/?safe=active&ssui=on" target="_blank">
+                    <p>
+                        voltar
+                    </p>
+                </div>
+                <div class="pagar">
+                    <p>
+                        comprar
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="adicional">
+            <br>
+            <a>
+                adicionais:
+            </a>
+            <p>
+                -Comidas R$200,00
+                <br><br>
+                -Bebidas R$350,00
+                <br><br>
+                -Roupas de cama R$100,00
+                <br><br>
+                 -itens higiene R$100,00
+                 <br><br>
+                 Total: R$15750,00
+            </p>
+        </div>
+    </div>
 </div>
 
 </body>
