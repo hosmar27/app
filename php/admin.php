@@ -3,10 +3,10 @@
 include("conecta.php");
 
 // Conexão com o banco de dados
-$servidor = "localhost";
-$usuario = "seu_usuario";
-$senha = "sua_senha";
-$banco = "nome_do_banco";
+$id = "id"
+$nome = "nome";
+$senha = "senha";
+$email = "email";
 
 // Função para exibir a lista de usuários
 function exibirUsuarios() {
@@ -92,9 +92,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
     <title>Página de Administração</title>
+
 </head>
 <body>
+
+<div class="tiradecima">
+    <nav class="navegador" role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Info</li></a>
+            <a href="#"><li>Contato</li></a>
+            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+          </ul>
+        </div>
+    </nav>
+    <div class="carrinho">
+        <a href="carrinho.php" target="_blank">
+            <img src="../imagens/carrinho.png" width="130px">
+        </a>
+    </div> 
+    <div class="perfil">      
+        <img src="../imagens/perfil.png" width="100px">
+    </div> 
+    
+</div> 
+
+<datafield class="dadosperfil"> 
+        <legend> Dados Pessoais</legend>
+        <br>
+        Nome: <input type=”text” id=”nome”>
+        <br> <br>
+        @Email: <input type=”text” id=”email”>
+        <br> <br>
+        N°número: <input type=”text” id=”numero”>
+        <br> <br>
+        <a href="https://www.google.com.br/?safe=active&ssui=on" target="_blank">
+            dados do cadastro
+        </a>
+</datafield> 
+
     <!-- Exibir usuários -->
     <h2>Lista de Usuários</h2>
     <?php exibirUsuarios(); ?>

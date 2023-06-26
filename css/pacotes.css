@@ -85,14 +85,12 @@ header
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  
-  /* make it look decent enough */
   background-image: url(../imagens/fundo_mar.jpeg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   color: #cdcdcd;
-
   overflow-x: hidden;
   height: 100vh;
  }
@@ -227,21 +225,45 @@ header
  }
 
 .aviso{
-    display: none;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    position: absolute;
-    z-index: 1;
-    border-radius: 10px;
-    top: 50%;
-    left: 42%;
-    width: 15%;
-    height: 10%;
-    background-color: white;
-    color: black;
-    border: 5px black solid;
+  display: none;
+  width: 70%;
+  height: 55%;
+  position: sticky;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 200px;
+  z-index: 1;
+  border-radius: 10px;
+  color: #01223d;
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  background: rgba(0,55,133, 0.10);
+  backdrop-filter: blur(20px);
+  background-attachment: fixed;
+}
+
+p#nome{
+  font-weight: 900;
+  font-size: 50px ;
+}
+
+p#preco{
+  font-weight: 400;
+  font-size: 40px;
+}
+
+p#descricao{
+  font-size: 20px;
+}
+
+.aviso p
+{
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
 }
 
 .bals{

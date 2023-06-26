@@ -73,33 +73,43 @@
 
 <?php
 
-  include("../php/conecta.php");
+include("../php/conecta.php");
 
-  $sql = $pdo->prepare("SELECT imagem, nome, valor FROM pacote");
-  $sql->execute();
+$sql = $pdo->prepare("SELECT * FROM pacotes");
+$sql->execute();
 
-  while ($linhas = $sql->fetch(PDO::FETCH_ASSOC)) {
-      $imagem = $linhas["imagem"];
-      $nome = $linhas["nome"];
-      $valor = $linhas["valor"];
-      echo "
-      <div class='pacote' onclick=\"bct('pacote barbados','500')\">
-        <img src='" . base64_encode($imagem) . "' alt='imagem' /><br>
-        $nome
-        $valor
-      </div>";
-  }
+while ($linhas = $sql->fetch()) {
+  $id = $linhas["id"];
+  $imagem = $linhas["imagem"];
+  $nome = $linhas["nome"];
+  $valor = $linhas["valor"];
+  $descricao = $linhas["descricao"];
+  echo "
+  <div class='pacote' onclick=\"bct('$nome','R$ $valor','$descricao','$id')\">
+    <img src='data:image/jpeg;base64," . base64_encode($imagem) . "' alt='imagem' /><br>
+    $nome
+    <br>
+    R$ $valor
+  </div>
+  <div class=\"aviso\" id=\"aviso_$id\">
+    <p id=\"nome_$id\">pedido</p>
+    <p id=\"preco_$id\">pedido</p>
+    <br>
+    <p id=\"descricao_$id\">pedido</p>
+
+    <a href=\"carrinho.php?id_pacote=$id\">
+      <button id=\"comprar\">comprar</button>
+    </a>
+
+    <button id=\"cancelar_pacote_$id\" onclick=\"pnss()\">
+      cancelar
+    </button>
+  </div>";
+}
 ?>
 
   </div>
-
-   <div class="aviso" id="aviso">
-    <p id="nome">pedido</p>
-    <p id="preco">pedido</p>
-    <button id="cancelar_pacote_1" onclick="pnss()">
-      cancelar
-    </button>
-   </div>
+  
 
       </div>
     </div>
@@ -108,16 +118,26 @@
 
 </body>
 <script>
-  function bct(x,y){
+  function bct(x, y, z, id) {
+  var avisoID = "aviso_" + id;
+  var nomeID = "nome_" + id;
+  var precoID = "preco_" + id;
+  var descricaoID = "descricao_" + id;
 
-    document.getElementById('aviso').style.display = 'flex';
-    document.getElementById('nome').innerHTML = x;
-    document.getElementById('preco').innerHTML = y;
-  }
+  document.getElementById(avisoID).style.display = 'flex';
+  document.getElementById(nomeID).innerHTML = x;
+  document.getElementById(precoID).innerHTML = y;
+  document.getElementById(descricaoID).innerHTML = z;
+}
 
-  function pnss(){
+function pnss(id) {
+  var avisoID = "aviso_" + id;
+  document.getElementById(avisoID).style.display = 'none';
+}
 
-    document.getElementById('aviso').style.display = 'none';
+
+  function enviar_id(x){
+  window.open("carrinho.php?id_pacote="+x,"_self")
   }
 </script>
 </html>
