@@ -19,16 +19,12 @@
           <nav role="navigation">
             <div id="menuToggle">
               
-          
               <input type="checkbox" />
               
-            
-            
               <span></span>
               <span></span>
               <span></span>
               
-           
               <ul id="menu">
                 <a href="pagina5.html"><li>Cadastro</li></a>
                 <a href="#"><li>About</li></a>
@@ -46,12 +42,8 @@
           </h1>
         </div>
        
-         
-           
       </div>  
         
-  
-
       </div>
         <div class="dir">
             <img src="../imagens/submariano.png">
@@ -60,9 +52,6 @@
       </div>  
     </header>
       
-      
-    
-    
   </div>
 <div>
   <div class="meio">
@@ -95,13 +84,13 @@ while ($linhas = $sql->fetch()) {
     <p id=\"nome_$id\">pedido</p>
     <p id=\"preco_$id\">pedido</p>
     <br>
-    <p id=\"descricao_$id\">pedido</p>
+    <p style='font-size: 20px;' id='descricao_$id'>pedido</p>
 
     <a href=\"carrinho.php?id_pacote=$id\">
-      <button id=\"comprar\">comprar</button>
+      <button onclick=\"enviar_id($id)\" id=\"comprar\">comprar</button>
     </a>
 
-    <button id=\"cancelar_pacote_$id\" onclick=\"pnss()\">
+    <button id=\"cancelar_pacote_$id\" onclick=\"pnss('$id')\">
       cancelar
     </button>
   </div>";
@@ -134,7 +123,6 @@ function pnss(id) {
   var avisoID = "aviso_" + id;
   document.getElementById(avisoID).style.display = 'none';
 }
-
 
   function enviar_id(x){
   window.open("carrinho.php?id_pacote="+x,"_self")

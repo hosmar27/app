@@ -1,24 +1,24 @@
 <?php
-    include("conecta.php");
+include("conecta.php");
 
-    $comando = $pdo->prepare("SELECT * FROM pacotes");
-    $resultado = $comando->execute();
-    
-    while ($linhas = $comando->fetch() )
-    {
-        $id = $linhas["id"];
-        $imagem = $linhas["imagem"];
-        $nome = $linhas["nome"]; 
-        $valor = $linhas["valor"]; 
-    }
+$comando = $pdo->prepare("SELECT * FROM pacotes");
+$resultado = $comando->execute();
 
-    $id_pacote=$_GET["id_pacote"];
+while ($linhas = $comando->fetch()) {
+    $id = $linhas["id"];
+    $imagem = $linhas["imagem"];
+    $nome = $linhas["nome"];
+    $valor = $linhas["valor"];
+}
 
-    $comando = $pdo->prepare("SELECT * FROM pacotes WHERE id = '$id_pacote'");
-    $resultado = $comando->execute();
-    $pegar_nome = $comando->fetch();
-    $nome_pacote = $pegar_nome["valor"];
-    echo $nome_pacote;
+$id_pacote = $_GET["id_pacote"];
+
+$comando = $pdo->prepare("SELECT * FROM pacotes WHERE id = :id_pacote");
+$comando->bindParam(":id_pacote", $id_pacote);
+$resultado = $comando->execute();
+$pegar_nome = $comando->fetch();
+$nome_pacote = $pegar_nome["valor"];
+echo $nome_pacote;
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
     <title>Carrinho</title>
     <link rel="stylesheet" type="text/css" href="../css/carrinho.css">
 </head>
-<body>  
+<body>
  
 <div class="tiradecima">
     <nav class="navegador" role="navigation">
@@ -62,11 +62,11 @@
 <datafield class="dadosperfil"> 
         <legend> Dados Pessoais</legend>
         <br>
-        Nome: <input type=”text” id=”nome”>
+        Nome: <input type="text" id="nome">
         <br> <br>
-        @Email: <input type=”text” id=”email”>
+        @Email: <input type="text" id="email">
         <br> <br>
-        N°número: <input type=”text” id=”numero”>
+        N°número: <input type="text" id="numero">
         <br> <br>
         <a href="https://www.google.com.br/?safe=active&ssui=on" target="_blank">
             dados do cadastro
@@ -77,7 +77,7 @@
 
     <div class="organizatitulo">
         <img src="../imagens/meucarrinho.png" width="50px">
-        <a>
+        <a style="font-size: 35px;">
             Meu carrinho
         </a>
         <img src="../imagens/meucarrinho.png" width="50px">
@@ -87,18 +87,14 @@
         <div class="imgseadd">
             <br>
             <a>
-                Pacote:
+            <?php echo $nome; ?>
             </a>
             <br>
-            <img src="../imagens/fotos (3).png" width="150px">
-            <br>
-            <a>
-                Pacote para Havaí
-            </a>
+            <img src="<?php echo $imagem; ?>" alt="imagem" /><br>
             <br><br>
-            <p>
-                 Família R$: 15000,00
-            </p>
+            <a>
+                 Família R$: <?php echo $valor; ?>
+            </a>
             <div class="organizabotao">
                 <div class="pagar" href="https://www.google.com.br/?safe=active&ssui=on" target="_blank">
                     <p>
@@ -118,17 +114,7 @@
             <a>
                 adicionais:
             </a>
-            <p>
-                -Comidas R$200,00
-                <br><br>
-                -Bebidas R$350,00
-                <br><br>
-                -Roupas de cama R$100,00
-                <br><br>
-                 -itens higiene R$100,00
-                 <br><br>
-                 Total: R$15750,00
-            </p>
+            
         </div>
     </div>
 </div>
