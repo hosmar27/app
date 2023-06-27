@@ -22,6 +22,7 @@ CREATE TABLE pedido (
     usuario_id INT NOT NULL,
     pacote_id INT NOT NULL,
     adicionais VARCHAR(90) NOT NULL,
+    valor_adicionais decimal(11) NOT NULL,
     status VARCHAR(20),
     FOREIGN KEY (usuario_id) REFERENCES Usuario(id),
     FOREIGN KEY (pacote_id) REFERENCES Pacotes(id)
@@ -59,7 +60,7 @@ insert into pacotes (nome, valor, descricao) values
     ('Pacote Itapocu', '15000', 'Embarque em uma jornada para descobrir os encantos de Itapocu, em Araquari, Santa Catarina. Situado em meio à deslumbrante natureza, este destino oferece uma combinação perfeita de praias intocadas, paisagens deslumbrantes e uma rica herança cultural.'),
     ('Pacote Pansea', '30000', 'Anse Chastanet é conhecida por sua visibilidade excepcionalmente clara e suas águas tranquilas. A temperatura agradável durante todo o ano e as condições favoráveis criam um ambiente perfeito para explorar o mundo subaquático. Mergulhadores de todos os níveis de experiência encontrarão uma variedade de opções de mergulho, desde recifes rasos até paredões profundos.');
 
-INSERT INTO carrinho (adicionais, valor_adicionais)VALUES (
+INSERT INTO pedido (adicionais, valor_adicionais)VALUES (
     'comida', '200'),
     ('bebida', '350'),
     ('roupas de cama', '100'),
