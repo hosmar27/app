@@ -1,24 +1,16 @@
 <?php
 include("conecta.php");
 
-$comando = $pdo->prepare("SELECT * FROM pacotes");
-$resultado = $comando->execute();
-
-while ($linhas = $comando->fetch()) {
-    $id = $linhas["id"];
-    $imagem = $linhas["imagem"];
-    $nome = $linhas["nome"];
-    $valor = $linhas["valor"];
-}
-
 $id_pacote = $_GET["id_pacote"];
 
 $comando = $pdo->prepare("SELECT * FROM pacotes WHERE id = :id_pacote");
 $comando->bindParam(":id_pacote", $id_pacote);
 $resultado = $comando->execute();
-$pegar_nome = $comando->fetch();
-$nome_pacote = $pegar_nome["valor"];
-echo $nome_pacote;
+$dados_pacote = $comando->fetch();
+
+$nome_pacote = $dados_pacote["nome"];
+$valor_pacote = $dados_pacote["valor"];
+$imagem_pacote = $dados_pacote["imagem"];
 ?>
 
 <!DOCTYPE html>
@@ -74,47 +66,33 @@ echo $nome_pacote;
 </datafield> 
 
 <div class="meucarrinho">
-
     <div class="organizatitulo">
         <img src="../imagens/meucarrinho.png" width="50px">
-        <a style="font-size: 35px;">
-            Meu carrinho
-        </a>
+        <a style="font-size: 35px;">Meu carrinho</a>
         <img src="../imagens/meucarrinho.png" width="50px">
     </div>
 
     <div class="organizaitens">
         <div class="imgseadd">
             <br>
-            <a>
-            <?php echo $nome; ?>
-            </a>
+            <a><?php echo $nome_pacote; ?></a>
             <br>
-            <img src="<?php echo $imagem; ?>" alt="imagem" /><br>
+            <img src="data:image/jpeg;base64,<?php echo base64_encode($imagem_pacote); ?>" alt="imagem" /><br>
             <br><br>
-            <a>
-                 Família R$: <?php echo $valor; ?>
-            </a>
+            <a>Valor R$: <?php echo $valor_pacote; ?></a>
             <div class="organizabotao">
                 <div class="pagar" href="https://www.google.com.br/?safe=active&ssui=on" target="_blank">
-                    <p>
-                        voltar
-                    </p>
+                    <p>voltar</p>
                 </div>
                 <div class="pagar">
-                    <p>
-                        comprar
-                    </p>
+                    <p>comprar</p>
                 </div>
             </div>
         </div>
-
+        
         <div class="adicional">
             <br>
-            <a>
-                adicionais:
-            </a>
-            
+            <a>adicionais:</a>
         </div>
     </div>
 </div>
