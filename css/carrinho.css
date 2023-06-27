@@ -80,15 +80,17 @@ p
     align-items: center;
 }
 
-.pagar /** botão pagar **/
+.pagar
 {
   display: flex;
   align-items: center;
   align-content: center;
+  justify-content: center;
+  justify-items: center;
   width: 130px;
   height: 30px;
   font-size: 25px;
-  background: #06a7cb;
+  background: #00b6e4;
   margin: top 5px;
   color: #fff;
   cursor: pointer;
