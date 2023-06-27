@@ -74,7 +74,7 @@ body
  margin: 0;
  padding: 0;
  
- /* make it look decent enough */
+ /* fazer com que pareça decente o suficiente */
  background-image: url(../imagens/fundo_mar.jpeg);
  background-repeat: no-repeat;
  background-position: center;
@@ -120,14 +120,14 @@ body
  
  cursor: pointer;
  
- opacity: 0; /* hide this */
- z-index: 2; /* and place it over the hamburger */
+ opacity: 0; /* esconder isso */
+ z-index: 2; /* e coloque sobre o hamburguer */
  
  -webkit-touch-callout: none;
 }
 
 /*
-* Just a quick hamburger
+* menu hamburger
 */
 #menuToggle span
 {
@@ -322,7 +322,7 @@ ul.slides input {
 }
 
 
-/*.carousel-dots {
+.carousel-dots {
   position: absolute;
   left: 0;
   right: 0;
@@ -332,14 +332,14 @@ ul.slides input {
 }
 .carousel-dots .carousel-dot {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0.5;
   margin: 10px;
 }
-*/
+
 
 input:checked + .slide-container .slide-image {
   opacity: 1;
