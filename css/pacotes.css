@@ -11,7 +11,6 @@ header
  }
  .esq
  {
-
     gap: 16px;
     height: 100%;
     display: flex;
@@ -300,3 +299,18 @@ p#descricao_1{
   height: 70%;
 }
 
+button
+{
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width: 130px;
+  height: 30px;
+  font-size: 18px;
+  background: #00b6e4;
+  margin: top 5px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}

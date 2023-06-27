@@ -81,18 +81,22 @@ while ($linhas = $sql->fetch()) {
     R$ $valor
   </div>
   <div class=\"aviso\" id=\"aviso_$id\">
+
     <p id=\"nome_$id\">pedido</p>
     <p id=\"preco_$id\">pedido</p>
     <br>
     <p style='font-size: 20px;' id='descricao_$id'>pedido</p>
+    <br>
 
+    <div class='botao'>
     <a href=\"carrinho.php?id_pacote=$id\">
-      <button onclick=\"enviar_id($id)\" id=\"comprar\">comprar</button>
+      <button class='botao' onclick=\"enviar_id($id)\" id=\"comprar\">comprar</button>
     </a>
-
     <button id=\"cancelar_pacote_$id\" onclick=\"pnss('$id')\">
       cancelar
     </button>
+    </div>
+    
   </div>";
 }
 ?>
@@ -114,6 +118,7 @@ while ($linhas = $sql->fetch()) {
   var descricaoID = "descricao_" + id;
 
   document.getElementById(avisoID).style.display = 'flex';
+  document.getElementById(avisoID).style.position = 'fixed';
   document.getElementById(nomeID).innerHTML = x;
   document.getElementById(precoID).innerHTML = y;
   document.getElementById(descricaoID).innerHTML = z;

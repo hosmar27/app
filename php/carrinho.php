@@ -77,23 +77,44 @@ $imagem_pacote = $dados_pacote["imagem"];
             <br>
             <a><?php echo $nome_pacote; ?></a>
             <br>
-            <img src="data:image/jpeg;base64,<?php echo base64_encode($imagem_pacote); ?>" alt="imagem" /><br>
+            <img style="height: 192px; width: 262px" src="data:image/jpeg;base64,<?php echo base64_encode($imagem_pacote); ?>" alt="imagem" /><br>
             <br><br>
             <a>Valor R$: <?php echo $valor_pacote; ?></a>
             <div class="organizabotao">
-                <div class="pagar" href="https://www.google.com.br/?safe=active&ssui=on" target="_blank">
-                    <p>voltar</p>
-                </div>
-                <div class="pagar">
-                    <p>comprar</p>
-                </div>
+                <button class="pagar">Voltar</button>
+                <button class="pagar">Comprar</button>
             </div>
         </div>
         
         <div class="adicional">
             <br>
-            <a>adicionais:</a>
+        <a>
+            adicionais:
+        </a>
+        <ul>
+        <?php
+            include("conecta.php");
+
+            $id_pacote = $_GET["id_pacote"];
+
+            $comando = $pdo->prepare("SELECT * FROM pacotes WHERE id = :id_pacote");
+            $comando->bindParam(":id_pacote", $id_pacote);
+            $resultado = $comando->execute();
+            $pacote = $comando->fetch();
+
+            $adicionais = $pacote["adicionais"];
+
+            if (!empty($detalhes_adicionais)) {
+            $detalhes = explode(",", $detalhes_adicionais);
+
+            foreach ($detalhes as $detalhe) {
+                echo "<li>$detalhe</li>";
+            }
+            }
+        ?>
+        </ul>
         </div>
+
     </div>
 </div>
 
