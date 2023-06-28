@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+   
  }
  header
  {
@@ -217,9 +217,6 @@
  {
   transform: none;
  }
- @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
-
-
 
 .quadradodados
 {
@@ -280,7 +277,7 @@ a
 .perfil
 {
     cursor: pointer;
-    height: 100px; /*altura*/
+    height: 70px; /*altura*/
     width: 100%; /* largura*/
     display: flex;
     z-index: 20;

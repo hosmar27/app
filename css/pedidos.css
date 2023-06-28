@@ -370,7 +370,7 @@ p
     font-size: 25px;
     box-shadow: 2px 2px #031A39;
     z-index: 100;
-    margin-top: 250px;
+    margin-top: 100px;
     align-items: center;
 }
 
@@ -438,3 +438,11 @@ p
 
 /*MAUSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 MAUSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+.perfil
+{
+  cursor: pointer;
+  height: 70px; /*altura*/
+  width: %; /* largura*/
+  display: flex;
+  z-index: 20;
+}
