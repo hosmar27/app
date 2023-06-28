@@ -1,34 +1,34 @@
 <?php
+session_start();
 
-    $nome = $_POST["nome"]; //Pega o input
-    $senha = $_POST["senha"];
+include("conecta.php"); // Conecta com o banco de dados
 
-    include("conecta.php"); //Conecta com o banco de dados 
+$email = $_POST["email"]; // Pega o input
+$senha = $_POST["senha"];
+$admin = $_POST["admin"];
 
-    $comando = $pdo->prepare("SELECT * FROM usuario WHERE nome = '$nome' and senha = '$senha' ");
-    $resultado = $comando->execute();
-    $n = 0;
-    while( $linhas = $comando->fetch() )
-    {
-        $n = 1;
+$comando = $pdo->prepare("SELECT * FROM usuario WHERE email = '$email' and senha = '$senha' ");
+$comando->execute();
+
+if ($comando->rowCount() > 0) {
+    $_SESSION['logado'] = true; // Define o status de logado como true
+    $_SESSION['email'] = $email;
+    $_SESSION['senha'] = $senha;
+
+    while ($linhas = $comando->fetch()) {
         $admin = $linhas["admin"];
     }
 
-    if($n == 0)
-    {
-        header("Location: index.html");
+    if ($admin == "s") {
+        header("Location: ../php/admin.php");
+    } 
+    
+    else ($admin == "n");{
+        header("Location: ../html/index.php");
     }
-
-    if($n == 1)
-    {
-        if($admin == "s")
-        {
-            header("Location: admin.html");
-        }
-        else
-        {
-            header("Location: ../html/index.html");
-        }
-    }
-
+} 
+    else {
+        header("Location: ../html/login.html");
+    exit;
+}
 ?>

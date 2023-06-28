@@ -1,3 +1,13 @@
+<?php 
+
+  if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true))
+      {
+          unset($_SESSION['email']);
+          header('Location: ../html/login.html');
+      }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -63,6 +73,8 @@
 <?php
 
 include("../php/conecta.php");
+
+
 
 $sql = $pdo->prepare("SELECT * FROM pacotes");
 $sql->execute();

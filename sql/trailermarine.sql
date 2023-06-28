@@ -5,6 +5,7 @@ CREATE TABLE usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(90) NOT NULL,
     email VARCHAR(90) NOT NULL,
+    senha VARCHAR(20) NOT NULL,
     cpf VARCHAR(11) NOT NULL,
     admin VARCHAR(1) NOT NULL
 );
@@ -50,12 +51,12 @@ CREATE TABLE pagamento (
 USE trailermarine;
 
 -- Insira os registros na tabela 'usuario'
-INSERT INTO usuario (nome, email, cpf, admin) VALUES
-    ('Henrique Osmar Adelino', 'henrique@email.com', '52542354323', 's'),
-    ('Neymar Da Silva Santos Junior', 'ney@email.com', '00000000001', 'n'),
-    ('João Vitor Ferreira', 'joao@email.com', '23565463423', 's'),
-    ('Tom Cruise Mapother IV', 'tom@email.com', '15323467375', 'n'),
-    ('Camila Selhorst Fernandes', 'camila@email.com', '63514465743', 's');
+INSERT INTO usuario (nome, email, senha, cpf, admin) VALUES
+    ('Henrique Osmar Adelino', 'henrique@email.com', '123','52542354323', 's'),
+    ('Neymar Da Silva Santos Junior', 'ney@email.com', '123','00000000001', 'n'),
+    ('João Vitor Ferreira', 'joao@email.com', '123','23565463423', 's'),
+    ('Tom Cruise Mapother IV', 'tom@email.com', '123','15323467375', 'n'),
+    ('Camila Selhorst Fernandes', 'camila@email.com', '123','63514465743', 's');
 
 -- Insira os registros na tabela 'pacotes'
 INSERT INTO pacotes (nome, valor, descricao) VALUES
