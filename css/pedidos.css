@@ -426,23 +426,15 @@ p
   z-index: 10;
 }
 
-.dadosperfil /*TRANSIÇÃOOOOOOOOOOOO pra ir para ESQUERDAAAA (APARECE)*/
-{
-  
-}
 .navegador
 {
     position: absolute;
     top: 0px;
 }
 
-/*MAUSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-MAUSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
-.perfil
+/*mouse*/
+.perfil 
 {
   cursor: pointer;
   height: 70px; /*altura*/
-  width: %; /* largura*/
-  display: flex;
-  z-index: 20;
 }

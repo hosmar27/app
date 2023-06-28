@@ -68,10 +68,6 @@ INSERT INTO pacotes (nome, valor, descricao) VALUES
 
 -- Insira os registros na tabela 'pedido' correspondendo aos 'usuario_id' existentes na tabela 'usuario'
 INSERT INTO pedido (usuario_id, pacote_id, adicionais, valor_adicionais, status) VALUES
-    (1, 1, 'comida', '200', 'Em andamento'),
-    (2, 2, 'bebida', '350', 'Em andamento'),
-    (3, 3, 'roupas de cama', '100', 'Em andamento'),
-    (4, 4, 'itens de higiene', '100', 'Em andamento');
 
 -- Insira os registros na tabela 'pagamento' correspondendo aos 'pedido_id' existentes na tabela 'pedido'
 INSERT INTO pagamento (pedido_id, nome, email, rua, numero, complemento, cidade, estado, cep, numero_cartao, nome_cartao, data_cartao, cvv) VALUES

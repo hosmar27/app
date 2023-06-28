@@ -29,9 +29,9 @@
             <span></span>
 
             <ul id="menu">
-            <a href="cadastro.html"><li>Cadastro</li></a>
-            <a href="pacotes.php"><li>Pacotes</li></a>
-            <a href="#"><li>Suporte</li></a>
+              <a href="pacotes.php"><li>Pacotes</li></a>
+              <a href="carrinho.php"><li>Carrinho</li></a>
+              <a href="perfil.php"><li>Perfil</li></a>
             </ul>
           </div>
         </nav>
