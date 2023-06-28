@@ -275,6 +275,22 @@
    
  }
 
+ a
+{
+    color: #96e3f4;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'DynaPuff', cursive;
+    margin-top: 20px;
+}
+
+p
+{
+  color: aliceblue;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}
+
 .suporte
 {
     background: rgba(2, 32, 74, 0.5);
@@ -292,7 +308,6 @@
     margin-top: 100px;
     align-items: center;
     align-content: center;
-    justify-content: space-between;
     margin-left: 30%;
     margin-top: 8%;
 }
