@@ -292,12 +292,6 @@ a
 }
 
 
-/**input
-{
-  box-shadow: #000;
-}
-**/
-
 .container form /** quadrado **/
 {
   margin-left: 30%;
@@ -371,12 +365,12 @@ a
   justify-content: space-around;
 }
 
-.organizatitul
+.organizatitulo
 {
   display: flex;
   align-items: center;
   align-content: center;
-
+  justify-content: space-around;
 }
 
 .pagar /** botão pagar **/
@@ -442,4 +436,9 @@ transform-origin: 0% 0%;
 transform: translate(120%, 0);
 transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 z-index: 10;
+}
+
+.dadosperfil /*TRANSIÇÃOOOOOOOOOOOO pra ir para ESQUERDAAAA (APARECE)*/
+{
+
 }
