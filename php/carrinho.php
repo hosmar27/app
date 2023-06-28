@@ -32,43 +32,47 @@ $imagem_pacote = $dados_pacote["imagem"];
     <link rel="stylesheet" type="text/css" href="../css/carrinho.css">
 </head>
 
+</head>
 <body>
-
-    <div class="tiradecima">
-        <nav class="navegador" role="navigation">
+    <header>
+      <div class="esq">
+        <div class="pqp">
+          <nav role="navigation">
             <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                    <a href="#">
-                        <li>Home</li>
-                    </a>
-                    <a href="#">
-                        <li>About</li>
-                    </a>
-                    <a href="#">
-                        <li>Info</li>
-                    </a>
-                    <a href="#">
-                        <li>Contato</li>
-                    </a>
-                    <a href="https://erikterwan.com/" target="_blank">
-                        <li>Show me more</li>
-                    </a>
-                </ul>
+              
+          
+              <input type="checkbox" />
+              
+            
+            
+              <span></span>
+              <span></span>
+              <span></span>
+              
+           
+              <ul id="menu">
+                <a href="cadastro.html"><li>Cadastro</li></a>
+                <a href="pacotes.php"><li>Pacotes</li></a>
+                <a href="#"><li>Suporte</li></a>
+                <a href="index.html"><li>Inicio</li></a>
+                
+              </ul>
             </div>
-        </nav>
-        <div class="carrinho">
-            <a href="carrinho.html" target="_blank">
-                <img src="../imagens/carrinho.png" width="130px">
-            </a>
-        </div>
-        <div class="perfil">
-            <img src="../imagens/perfil.png" width="100px">
-        </div>
+          </nav>
 
+        </div>
+        <div class="pqp_direita">
+          <h1>
+            Trailermarine
+          </h1>
+        </div>
+       
+      </div>  
+        <div class="dir">
+            <a href="../php/pacotes.php"><img src="../imagens/submariano.png"></a>
+            <a href="../html/login.html"><img src="../imagens/icone (3).png" class="perfil" > </a>
+        </div>
+    </header>
     </div>
 
     <datafield class="dadosperfil">
