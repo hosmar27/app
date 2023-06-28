@@ -1,0 +1,302 @@
+@import url('https://fonts.googeapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+
+h3
+{
+    font-family: 'Poppins',sans-serif;
+    font-size: 10px;
+}
+
+a
+{
+    color: #96e3f4;
+    text-decoration: none;
+    font-family: 'DynaPuff', cursive;
+    margin-top: 20px;
+    align-items: center;
+    display:flex;
+    font-size: 25px;
+}
+
+
+/**input
+{
+    box-shadow: #000;
+}
+**/
+
+.container form /** quadrado **/
+{
+    margin-top: 25%;
+    padding: 20px;
+    width: 620px;
+    height: 500px;
+    background:#031a397c;
+    border-radius: 40px;
+    border-color: #000;
+    align-items: center;
+    box-shadow: 2px 2px #031A39;
+    font-size: 18px;
+}
+
+.contaner form .row /** linha **/
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contaner form .row .col /** coluna **/
+{
+    flex: 1 1 250px;
+}
+
+.contaner form .row .col .inputBox /** linha, coluna **/
+{
+    margin: 15px 0;
+}
+
+.contaner form .row .col .inputBox span /** linha, coluna **/
+{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contaner form .row .col .inputBox input /** linha, coluna **/
+{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-transform: none;
+}
+
+.contaner form .row .col .inputBox input:focus /** linha, coluna **/
+{
+    border: 1px solid #333;
+}
+
+.contaner form .row .col .flex /** flexivel **/
+{
+    display: flex;
+    gap: 15px;
+}
+
+.contaner form .row .col .inputBox img /** linha, coluna, imagem **/
+{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.organizab
+{
+    display: flex;
+    width: 500px;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.organizatitul
+{
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+
+.pagar /** botão pagar **/
+{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    background: #06a7cb;
+    margin: top 5px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;            
+    font-size: 25px;
+}
+
+.pagar:hover  /** quando clicar no botão ficar dessa cor **/
+{
+    background: #87CEFA;
+}
+
+.carrinho
+{
+    height: 130px; /*altura*/
+    width: 150%; /* largura*/
+    display: flex;
+    margin-top: 0px;
+    padding-left: 80%;
+}
+
+.perfil
+{
+    cursor: pointer;
+    height: 100px; /*altura*/
+    width: 200%; /* largura*/
+    display: flex;
+    z-index: 20;
+}
+
+.dadosperfil  /*ESTILO/TAMANHOOOOOOOO*/
+{
+    font-family: 'DynaPuff', cursive;
+    background-color: #ededed82;
+    height: 400px; /*altura*/
+    width: 400px; /* largura*/
+    position: absolute;
+    left: 75%;
+    color:black;
+    z-index: 10;
+    padding-top: 100px;
+    font-size: 25px;
+}
+
+.dadosperfil /*TRANSIÇÃOOOOOOOOOOOO pra ir para direitaaaaa (SUMIRRRRRR)*/
+{
+  position: absolute;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  transform-origin: 0% 0%;
+  transform: translate(120%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  z-index: 10;
+}
+
+.dadosperfil /*TRANSIÇÃOOOOOOOOOOOO pra ir para ESQUERDAAAA (APARECE)*/
+{
+  
+}
+
+#menuToggle /*tres risquinhos*/
+{
+  display: block;
+  position: relative;
+  top: 70px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a /*estilo das escritas*/
+{
+  text-decoration: none;
+  color: #a2e1ff;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover /*quando passar o mause ficar azul*/
+{
+  color: #28C0E1;
+}
+
+#menuToggle input /*começo da transição*/
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* ocultar tres risquinhos */
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span /*transição*/
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #a2e1ff;
+  border-radius: 3px;
+  z-index: 1;
+  /*aqui faz aparecer o quadrado branco*/
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), 
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child /*transição*/
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) /*transição*/
+{
+  transform-origin: 0% 100%;
+}
+
+/*Tres risquinhos formando uma cruz + */
+#menuToggle input:checked ~ span /*transição*/
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #a2e1ff;
+}
+/*
+ * esconde o risquinho do meio
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) /*transição*/
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+/*último deve ir na outra direção*/
+#menuToggle input:checked ~ span:nth-last-child(2) /*transição*/
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+/*
+ Faça este posicionamento absoluto
+ no canto superior esquerdo da tela
+ */
+#menu
+{
+  position: absolute;
+  width: 395px;
+  height: 320px;
+  margin: -100px 0 0 -50px;
+  padding: 0px;
+  padding-top: 125px;
+  background: #01223d;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* para interromper a oscilação do texto no safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li /*tamanho da letra*/
+{
+  margin-left: 50px;
+  font-size: 25px;
+}
+/*E vamos deslizá-lo da esquerda*/
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.navegador
+{
+    position: absolute;
+    top: 0px;
+}
+
+/*MAUSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+MAUSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
