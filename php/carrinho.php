@@ -3,6 +3,15 @@ include("conecta.php");
 
 $id_pacote = $_GET["id_pacote"];
 
+// Mensagem caso o usuário não tenha selecionado nada para o carrinho:
+if(!isset($id_pacote))
+{
+  echo("<script type='text/javascript'>");
+  echo("window.alert('Nada no carrinho!');");
+  echo("window.location.replace('index.php');");
+  echo("</script>");
+}
+
 $comando = $pdo->prepare("SELECT * FROM pacotes WHERE id = :id_pacote");
 $comando->bindParam(":id_pacote", $id_pacote);
 $resultado = $comando->execute();
@@ -46,7 +55,7 @@ $imagem_pacote = $dados_pacote["imagem"];
         </a>
     </div> 
     <div class="perfil">      
-        <img src="../imagens/perfil.png" width="100px">
+      <img src="../imagens/perfil.png" width="100px">
     </div> 
     
 </div> 

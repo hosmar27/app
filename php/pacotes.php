@@ -1,12 +1,7 @@
 <?php 
-
-  if((!isset($_SESSION['email']) == true ) and (!isset($_SESSION['senha']) == true))
-      {
-          unset($_SESSION['email']);
-          header('Location: ../html/login.html');
-      }
-
+    session_start();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,11 +31,9 @@
               <span></span>
               
               <ul id="menu">
-                <a href="pagina5.html"><li>Cadastro</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Info</li></a>
-                <a href="#"><li>Contact</li></a>
-                
+                <a href="index.php"><li>Home</li></a>
+                <a href="carrinho.php"><li>Carrinho</li></a>
+                <a href="perfil.php"><li>Perfil</li></a>
               </ul>
             </div>
           </nav>
