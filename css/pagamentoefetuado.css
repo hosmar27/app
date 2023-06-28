@@ -280,7 +280,7 @@ a
 .perfil
 {
     cursor: pointer;
-    height: 100px; /*altura*/
+    height: 70px; /*altura*/
     width: 100%; /* largura*/
     display: flex;
     z-index: 20;

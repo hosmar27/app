@@ -412,8 +412,8 @@ a
 .perfil
 {
   cursor: pointer;
-  height: 100px; /*altura*/
-  width: 200%; /* largura*/
+  height: 70px; /*altura*/
+  width: 120%; /* largura*/
   display: flex;
   z-index: 20;
 }
