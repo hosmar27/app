@@ -24,8 +24,8 @@ footer a p
 .container {
 	width: 400px;
 	margin: 100px auto;
-	background-color: #fff;
-	border: 1px solid #ddd;
+	background-color: rgba(2, 32, 74, 0.37);
+	border: 1px solid black;
 	padding: 30px;
 	border-radius: 5px;
 	/*box-shadow: #d3d3d3*/
@@ -33,13 +33,12 @@ footer a p
 	flex-direction: column;
 	align-items: center;
 	animation: 2s;
-
+	margin-bottom: 50px;
 }
 
 h1 {
 	font-size: 24px;
-	margin-bottom: 20px;
-	color: rgba(0, 171, 238, 0.596);
+	color: white;
 }
 
 .lacuna {
@@ -67,14 +66,19 @@ h1 {
 	flex-direction: column;
 }
 
+.caixa {
+	width: 200px;
+}
+
 .lacuna label {
 	margin-bottom: 10px;
-	color: rgb(0, 170, 212);
+	color: white;
 }
 
 .lacuna input[type="text"],
+.lacuna input[type="email"],
 .lacuna input[type="password"] {
-	width: 100%;
+	width: 90%;
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid #ddd;
@@ -83,6 +87,7 @@ h1 {
 }
 
 .lacuna input[type="text"]::placeholder,
+.lacuna input[type="email"]::placeholder,
 .lacuna input[type="password"]::placeholder {
 	color: #bbb;
 }
@@ -96,6 +101,7 @@ h1 {
 	padding: 10px 20px;
 	font-size: 16px;
 	margin-top: 20px;
+	width: 200px;
 }
 
 p {
@@ -110,14 +116,16 @@ a {
 }
 .meu_texto
 {   
+	/*text-shadow: 0 0 20px white, 0 0 10px #0000FF;*/
     animation:  3s;
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 120px;
+	font-weight: bolder;
+    font-size: 140px;
     color: rgb(0, 52, 196);
     text-shadow: 1px 1px black;
-    font-family: fantasy;
+    font-family: 'DynaPuff', cursive;
 }
 .bolhas
 {
@@ -134,14 +142,38 @@ a {
     align-items: center;
 }
 
+:root {
+    --background: #063970;
+  }
 
-@keyframes bolhas1{
-
-    0% {bottom: -1000px; opacity: 1;}
-    100% {bottom: 1100px; opacity: -0.7;}
+.title
+{
+    position: relative;
+    font-size: 100px;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation-name: fade-in; /* Set animation name */
+    animation-duration: 1s; /* Set animation duration */
+    animation-delay: 2s; /* Set delay before animation starts */
+    animation-fill-mode: forwards; /* Keep final state of animation */
 }
-@keyframes bolhas2{
+.meu_sub
+{
+    position: absolute;
+    animation: anima_sub 7s;
+    background-color: var(--background);
+    width: 50%;
+    left: -1500px;
+   
+}
 
-	0% {bottom: -700px; opacity: 1;}
-    100% {bottom: 1100px; opacity: -0.8;}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
