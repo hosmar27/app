@@ -50,8 +50,8 @@
         
       </div>
         <div class="dir">
-            <img src="../imagens/submariano.png">
-            <img src="../imagens/icone (3).png" class="perfil" >
+        <a href="../php/pacotes.php"><img src="../imagens/submariano.png"></a>
+        <a href="../html/login.html"><img src="../imagens/icone (3).png" class="perfil"> </a>
         </div>
       </div>  
     </header>
