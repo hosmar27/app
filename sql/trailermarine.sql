@@ -67,7 +67,7 @@ INSERT INTO pacotes (nome, valor, descricao) VALUES
     ('Pacote Pansea', '30000', 'Anse Chastanet é conhecida por sua visibilidade excepcionalmente clara e suas águas tranquilas. A temperatura agradável durante todo o ano e as condições favoráveis criam um ambiente perfeito para explorar o mundo subaquático. Mergulhadores de todos os níveis de experiência encontrarão uma variedade de opções de mergulho, desde recifes rasos até paredões profundos.');
 
 -- Insira os registros na tabela 'pedido' correspondendo aos 'usuario_id' existentes na tabela 'usuario'
-INSERT INTO pedido (usuario_id, pacote_id, adicionais, valor_adicionais, status) VALUES
+
 
 -- Insira os registros na tabela 'pagamento' correspondendo aos 'pedido_id' existentes na tabela 'pedido'
 INSERT INTO pagamento (pedido_id, nome, email, rua, numero, complemento, cidade, estado, cep, numero_cartao, nome_cartao, data_cartao, cvv) VALUES
