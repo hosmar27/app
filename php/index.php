@@ -50,7 +50,8 @@
       <a href="../html/login.html"><img src="../imagens/icone (3).png" class="perfil"> </a>
     </div>
   </header>
-  <!-- esses input são as imagens do carrosel, elas são visualizadas atravez do checked, ou seja onde o checked estiver é onde vai mostrar-->
+  <!-- a imagem que tem checked vai aparecer e todas as imagens tem um imput escondido,
+   o botão para ir pra frente é a lable do imput da proxima-->
   <div class="carousel">
     <ul class="slides">
       <input type="radio" name="radio-buttons" id="img-1" checked />
