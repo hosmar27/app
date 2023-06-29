@@ -42,20 +42,10 @@ $imagem_pacote = $dados_pacote["imagem"];
                 <span></span>
                 <span></span>
                 <ul id="menu">
-                    <a href="#">
-                        <li>Home</li>
-                    </a>
-                    <a href="#">
-                        <li>About</li>
-                    </a>
-                    <a href="#">
-                        <li>Info</li>
-                    </a>
-                    <a href="#">
-                        <li>Contato</li>
-                    </a>
-                    <a href="https://erikterwan.com/" target="_blank">
-                        <li>Show me more</li>
+                 <a href="../html/cadastro.html"><li>Cadastro</li></a>
+                 <a href="../php/pacotes.php"><li>Pacotes</li></a>
+                 <a href="../html/suporte.html"><li>Suporte</li></a>
+                 <a href="../php/index.php"><li>Inicio</li></a>
                     </a>
                 </ul>
             </div>

@@ -25,19 +25,11 @@
 						<span></span>
 
 						<ul id="menu">
-							<a href="cadastro.html">
-								<li>Cadastro</li>
-							</a>
-							<a href="pacotes.php">
-								<li>Pacotes</li>
-							</a>
-							<a href="#">
-								<li>Suporte</li>
-							</a>
-							<a href="index.html">
-								<li>Inicio</li>
-							</a>
-
+							
+							<a href="../html/cadastro.html"><li>Cadastro</li></a>
+               				<a href="../php/pacotes.php"><li>Pacotes</li></a>
+                			<a href="../html/suporte.html"><li>Suporte</li></a>
+               				<a href="../php/index.php"><li>Inicio</li></a>
 						</ul>
 					</div>
 				</nav>
