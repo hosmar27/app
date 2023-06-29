@@ -90,7 +90,7 @@ while ($linhas = $sql->fetch()) {
     <p id=\"nome_$id\">pedido</p>
     <p id=\"preco_$id\">pedido</p>
     <br>
-    <p style='font-size: 20px;' id='descricao_$id'>pedido</p>
+    <p style='font-size: 20px;width: 50%; text-align: justify;' id='descricao_$id'>pedido</p>
     <br>
 
     <div class='botao'>
