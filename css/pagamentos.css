@@ -371,12 +371,12 @@ a
   justify-content: space-around;
 }
 
-.organizatitul
+.organizatitulo
 {
   display: flex;
   align-items: center;
   align-content: center;
-
+  justify-content: space-around;
 }
 
 .pagar /** botão pagar **/
