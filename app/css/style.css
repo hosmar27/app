@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+body {
+	background-color: #0086f3;
+	font-family: Arial, sans-serif;
+	height: 100%;
+	width: 100%;
+	background-image: url(../imagens/fundo_mar.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+footer a p
+{
+	color: white;
+	text-decoration: none;
+}
+
+.container {
+	width: 400px;
+	margin: 100px auto;
+	background-color: rgba(2, 32, 74, 0.37);
+	border: 1px solid black;
+	padding: 30px;
+	border-radius: 5px;
+	/*box-shadow: #d3d3d3*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	animation: 2s;
+	margin-bottom: 50px;
+}
+
+h1 {
+	font-size: 24px;
+	color: white;
+}
+
+.lacuna {
+	width: 90%;
+}
+
+.email {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.nome {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.senha {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.caixa {
+	width: 200px;
+}
+
+.lacuna label {
+	margin-bottom: 10px;
+	color: white;
+}
+
+.lacuna input[type="text"],
+.lacuna input[type="email"],
+.lacuna input[type="password"] {
+	width: 90%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	color: #555;
+	font-size: 16px;
+}
+
+.lacuna input[type="text"]::placeholder,
+.lacuna input[type="email"]::placeholder,
+.lacuna input[type="password"]::placeholder {
+	color: #bbb;
+}
+
+.lacuna input[type="submit"] {
+	display: block;
+	background-color: #1300b9;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	margin-top: 20px;
+	width: 200px;
+}
+
+p {
+	margin-top: 20px;
+	color: #777;
+	font-size: 14px;
+}
+
+a {
+	color: #00b6e4;
+	text-decoration: none;
+}
+.meu_texto
+{   
+	/*text-shadow: 0 0 20px white, 0 0 10px #0000FF;*/
+    animation:  3s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+	font-weight: bolder;
+    font-size: 140px;
+    color: rgb(0, 52, 196);
+    text-shadow: 1px 1px black;
+    font-family: 'DynaPuff', cursive;
+}
+.bolhas
+{
+    left: 0px;
+    animation: bolhas1 4s forwards;
+    position: relative;
+    align-items: center;
+}
+.bolhas2
+{
+    animation: bolhas2 4s forwards;
+    margin-left: 90%;
+    position: relative;
+    align-items: center;
+}
+
+:root {
+    --background: #063970;
+  }
+
+.title
+{
+    position: relative;
+    font-size: 100px;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    opacity: 0; /* Set initial opacity to 0 */
+    animation-name: fade-in; /* Set animation name */
+    animation-duration: 1s; /* Set animation duration */
+    animation-delay: 2s; /* Set delay before animation starts */
+    animation-fill-mode: forwards; /* Keep final state of animation */
+}
+.meu_sub
+{
+    position: absolute;
+    animation: anima_sub 7s;
+    background-color: var(--background);
+    width: 50%;
+    left: -1500px;
+   
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
