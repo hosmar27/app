@@ -56,10 +56,6 @@
 		</div>
 	</header>
 
-</body>
-
-</html>
-
 <div class="tudo">
 
 	<?php
@@ -73,7 +69,7 @@
 	?>
 
 	<head>
-		<title class="principal">PAGINA ADMIN</title>
+		<h1 style="font-size: 100px;">PAGINA ADMIN</h1>
 	</head>
 
 
@@ -93,7 +89,6 @@
 		<html>
 
 		<head>
-			<title>Lista de Usuários</title>
 			<style>
 				table {
 					border-collapse: collapse;
@@ -132,6 +127,7 @@
 				<?php } ?>
 			</table>
 
+			<br><br><br>
 
 			<?php
 			include("conecta.php");
@@ -179,6 +175,8 @@
 			echo "</table>";
 			?>
 
+			<br><br><br>
+
 			<h1>Inserir Pacote</h1>
 
 			<div class="inserir">
@@ -190,6 +188,8 @@
 					<input type="submit" value="Enviar">
 				</form>
 			</div>
+
+			<br><br><br>
 
 			<h1>Inserir Usuario</h1>
 
@@ -228,6 +228,8 @@
 				<input type="submit" value="Atualizar Pacote">
 			</form>
 
+			<br><br><br>
+
 			<h1>Atualizar Usuario</h1>
 			<form class="atualizar" action="update_usuario.php" method="POST" enctype="multipart/form-data">
 				<label for="id_usuario">ID do Usuario:</label>
@@ -248,7 +250,10 @@
 				<input type="submit" value="Atualizar Usuario">
 			</form>
 
-		<div class="excluir">
+			<br><br><br>
+
+	<div class="all-excluir">		
+		<div class="inserir">
 			<h1>Excluir Pacote</h1>
 
 			<form method="POST" action="excluir_pacote.php">
@@ -258,7 +263,9 @@
 			</form>
 		</div>
 
-		<div class="excluir">
+		<br><br><br>
+
+		<div class="inserir">
 			<h1>Excluir Usuario</h1>
 
 			<form method="POST" action="excluir_usuario.php">
@@ -266,7 +273,8 @@
 				<input type="text" name="id_usuario" style="width: 30%;" id="id_usuario">
 				<button type="submit">Excluir</button>
 			</form>
-			</div>
+		</div>
+		</div>
 </div>
 </body>
 

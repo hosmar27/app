@@ -76,6 +76,23 @@ nav {
 	z-index: 9999;
 }
 
+.inserir{
+	background-color: rgba(2, 32, 74, 0.37);
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: 2s;
+    margin-bottom: 50px;
+}
+
+table{
+	background-color: rgba(2, 32, 74, 0.37);
+    border: 1px solid black;
+}
+
 h1 {
 	color: #a2e1ff;
 	font-family: 'Permanent Marker';
@@ -250,15 +267,34 @@ body {
 	display: block;
 	margin-bottom: 10px;
 	padding: 5px;
-	width: 100%;
+	width: 98%;
 }
 
-.inserir input[type="submit"] {
+::-webkit-file-upload-button{
+	padding: 5px 10px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+button{
 	padding: 10px 20px;
 	background-color: #4caf50;
 	color: white;
 	border: none;
 	cursor: pointer;
+	border-radius: 20px;
+}
+
+input[type="submit"] {
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
 }
 
 /* Estilo da tabela de usuários e pacotes */
@@ -277,21 +313,33 @@ table {
 	margin-bottom: 20px;
 }
 
+#menu li
+{
+ padding: 10px 0;
+ font-size: 22px;
+}
+
 input[type="textarea"] {
 	display: block;
 	margin-bottom: 10px;
 	padding: 5px;
-	width: 100%;
+	width: 98%;
 }
 
 input[type="text"] {
 	display: block;
 	margin-bottom: 10px;
 	padding: 5px;
-	width: 100%;
+	width: 98%;
 }
 
-.excluir{
+.all-excluir{
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	width: 70%;
+}
+
+.all-excluir .inserir{
+	width: 40%;
 }
