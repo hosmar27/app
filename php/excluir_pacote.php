@@ -1,33 +1,27 @@
 <?php
 include("conecta.php");
 
-// Pegar valores:
-$nome_pacote = $_POST['nome_pacote'];
-$valor = $_POST['valor_pacote'];
-$descricao = $_POST['descricao_pacote'];
-$imagem = file_get_contents($_FILES['foto_pacote']["tmp_name"]);
+if(isset($_POST['id_pacote'])) {
+  $id_pacote_excluir = $_POST['id_pacote'];
 
-$excluir = $pdo->prepare("DELETE FROM pacotes WHERE nome = 'valor_do_nome'");
-// $excluir->bindParam(":nome", $nome_pacote);
-// $excluir->bindParam(":imagem", $imagem. PDO::PARAM_LOB);
-$excluir->bindParam(":nome", $nome_pacote);
-$excluir->bindParam(":valor", $valor);
-$excluir->bindParam(":descricao", $descricao);
-$excluir->bindParam(":imagem", $imagem, PDO::PARAM_LOB);
+  try {
+    // Desativa temporariamente as restrições de chave estrangeira
+    $pdo->exec("SET FOREIGN_KEY_CHECKS=0");
 
-$excluir->execute();
+    $excluir_pedidos = $pdo->prepare("DELETE FROM pedido WHERE pacote_id = :id_pacote_excluir");
+    $excluir_pedidos->bindParam(":id_pacote_excluir", $id_pacote_excluir);
+    $excluir_pedidos->execute();
 
-if($excluir == TRUE)
-{
-	header("Location: admin.php");
+    $excluir_pacote = $pdo->prepare("DELETE FROM pacotes WHERE id = :id_pacote_excluir");
+    $excluir_pacote->bindParam(":id_pacote_excluir", $id_pacote_excluir);
+    $excluir_pacote->execute();
+
+    echo "Pacote excluído com sucesso.";
+  } catch(PDOException $e) {
+    echo "Erro ao excluir o pacote: " . $e->getMessage();
+  } finally {
+    // Restaura as restrições de chave estrangeira
+    $pdo->exec("SET FOREIGN_KEY_CHECKS=1");
+  }
 }
-
-// DA UM ECHO TENDO EM VISTA:
-  /*
-    1. Consulte o banco de dados ($consulta = $pdo->prepare("SELECT * FROM pacotes"))
-    2. Crie uma repetição com while pegando os valores da consulta (while($linhas = $consulta->fetch()))
-    3. Pega os valores das $linhas e atribua para varíaveis que serão exibidas na div
-    4. Dentro do while imprima as divs html, tlgd? e só criar a div
-  */
-
 ?>
