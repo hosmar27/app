@@ -1,6 +1,8 @@
 <?php
   include("conecta.php");
 
+  session_start();
+
   // Pegar valores:
   $nome_pacote = $_POST['nome_pacote'];
   $valor = $_POST['valor_pacote'];

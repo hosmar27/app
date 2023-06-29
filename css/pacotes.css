@@ -223,7 +223,7 @@ header
   transform: none;
  }
 
-.aviso{
+ .aviso{
   display: none;
   width: 70%;
   height: 55%;
@@ -237,7 +237,7 @@ header
   top: 200px;
   z-index: 1;
   border-radius: 10px;
-  color: #01223d;
+  color: #fafdff;
   border: 1px solid rgba(0, 0, 0, 0.15); 
   background: rgba(0,55,133, 0.10);
   backdrop-filter: blur(20px);

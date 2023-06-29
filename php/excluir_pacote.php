@@ -16,7 +16,7 @@ if(isset($_POST['id_pacote'])) {
     $excluir_pacote->bindParam(":id_pacote_excluir", $id_pacote_excluir);
     $excluir_pacote->execute();
 
-    echo "Pacote excluído com sucesso.";
+    header('Location: admin.php');
   } catch(PDOException $e) {
     echo "Erro ao excluir o pacote: " . $e->getMessage();
   } finally {
